@@ -391,7 +391,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Console', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff7f5b;
+  background: #c1ffb6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1516,7 +1516,7 @@ pre .javascript .function {
   }
 }
 .post-body {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1814,7 +1814,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2595,4 +2595,40 @@ pre {
 code,
 pre {
   border: 1px solid #d6d6d6;
+}
+p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-indent: 4ex;
+  line-height: 1.6;
+}
+@media (min-width: 1200px) {
+  .post-body {
+    font-size: 1em;
+  }
+}
+.site-title {
+  text-indent: 0;
+}
+.site-author-name {
+  text-indent: 0;
+}
+.post-button {
+  margin-top: 10px;
+}
+.posts-expand .post-header {
+  margin-bottom: 10px;
+}
+:root {
+  --theme-color: #6495ed;
+  --btn-default-color: #87cefa;
+  --btn-default-border-color: #87cefa;
+  --btn-default-hover-bg: #87cefa;
+  --btn-default-hover-border-color: #87cefa;
+}
+blockquote > p {
+  text-indent: 0;
+}
+ol > li > p {
+  text-indent: 0;
 }
