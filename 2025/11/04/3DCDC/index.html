@@ -22,20 +22,27 @@
     var CONFIG = {"hostname":"labidaisy888.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"order":-1},"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="DC-DC 电源是将一个固定的直流电压变换为可变的直流电压的电路，也称为直流斩波器，有 BUCK（降压）、BOOST（升压）、BUCK-BOOST（升降压）和反激等多种拓扑结构。其工作方式主要有 PWM 波 “定频调宽” 和 PFM 波 “定宽调频” 两种，一般采用 PWM 波控制开关管的通断。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="硬件进阶---器件归一化">
-<meta property="og:url" content="http://labidaisy888.tech/2025/11/04/4guiyihua/index.html">
+<meta property="og:title" content="硬件八股---DCDC基础知识讲解">
+<meta property="og:url" content="http://labidaisy888.tech/2025/11/04/3DCDC/index.html">
 <meta property="og:site_name" content="Bunny兔的硬件工厂">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="DC-DC 电源是将一个固定的直流电压变换为可变的直流电压的电路，也称为直流斩波器，有 BUCK（降压）、BOOST（升压）、BUCK-BOOST（升降压）和反激等多种拓扑结构。其工作方式主要有 PWM 波 “定频调宽” 和 PFM 波 “定宽调频” 两种，一般采用 PWM 波控制开关管的通断。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/%E5%BC%80%E5%A4%B4.gif">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/BUCK%E7%94%B5%E8%B7%AF.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/boost%E5%85%AC%E5%BC%8F.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/buck-boost%E7%94%B5%E8%B7%AF.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/bb%E5%85%AC%E5%BC%8F.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/%E5%8F%8D%E6%BF%80%E7%94%B5%E8%B7%AF.png">
 <meta property="article:published_time" content="2025-11-04T10:03:24.000Z">
-<meta property="article:modified_time" content="2025-11-04T10:19:45.563Z">
+<meta property="article:modified_time" content="2025-11-06T11:54:49.351Z">
 <meta property="article:author" content="Bunny">
-<meta property="article:tag" content="器件归一化">
+<meta property="article:tag" content="DCDC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://labidaisy888.tech/2025/11/04/3DCDC/%E5%BC%80%E5%A4%B4.gif">
 
-<link rel="canonical" href="http://labidaisy888.tech/2025/11/04/4guiyihua/">
+<link rel="canonical" href="http://labidaisy888.tech/2025/11/04/3DCDC/">
 
 
 <script id="page-configurations">
@@ -48,7 +55,7 @@
   };
 </script>
 
-  <title>硬件进阶---器件归一化 | Bunny兔的硬件工厂</title>
+  <title>硬件八股---DCDC基础知识讲解 | Bunny兔的硬件工厂</title>
   
 
 
@@ -202,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://labidaisy888.tech/2025/11/04/4guiyihua/">
+    <link itemprop="mainEntityOfPage" href="http://labidaisy888.tech/2025/11/04/3DCDC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -215,7 +222,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          硬件进阶---器件归一化
+          硬件八股---DCDC基础知识讲解
         </h1>
 
         <div class="post-meta">
@@ -225,26 +232,32 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-11-04 18:03:24 / 修改时间：18:19:45" itemprop="dateCreated datePublished" datetime="2025-11-04T18:03:24+08:00">2025-11-04</time>
+              <time title="创建时间：2025-11-04 18:03:24" itemprop="dateCreated datePublished" datetime="2025-11-04T18:03:24+08:00">2025-11-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-11-06 19:54:49" itemprop="dateModified" datetime="2025-11-06T19:54:49+08:00">2025-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">硬件进阶</span></a>
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">硬件八股知识划重点</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%BF%9B%E9%98%B6/%E5%99%A8%E4%BB%B6%E5%BD%92%E4%B8%80%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">器件归一化</span></a>
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/%E9%AB%98%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">高频知识点</span></a>
                 </span>
             </span>
 
           
-            <span id="/2025/11/04/4guiyihua/" class="post-meta-item leancloud_visitors" data-flag-title="硬件进阶---器件归一化" title="阅读次数">
+            <span id="/2025/11/04/3DCDC/" class="post-meta-item leancloud_visitors" data-flag-title="硬件八股---DCDC基础知识讲解" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -266,8 +279,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2025/11/04/4guiyihua/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2025/11/04/4guiyihua/" itemprop="commentCount"></span>
+    <a title="valine" href="/2025/11/04/3DCDC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2025/11/04/3DCDC/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -277,14 +290,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -296,19 +309,106 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>DC-DC 电源是将一个固定的直流电压变换为可变的直流电压的电路，也称为直流斩波器，有 BUCK（降压）、BOOST（升压）、BUCK-BOOST（升降压）和反激等多种拓扑结构。其工作方式主要有 PWM 波 “定频调宽” 和 PFM 波 “定宽调频” 两种，一般采用 PWM 波控制开关管的通断。<br> <span id="more"></span></p>
+<p><img src="%E5%BC%80%E5%A4%B4.gif"></p>
+<h2><a name="t0"></a>一、LDO和DCDC区别</h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul><li><strong>LDO</strong></li></ul>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>外围器件少，电路简单，成本低，负载响应快，输出纹波小；效率低，输入输出压差不能太大；<br>
+只能降压;噪声小，最低的静态电流，分为可调和固定型；目前最大的LDO为5A。</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<ul><li><strong>DC-DC</strong></li></ul>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>外围器件多，电路复杂，成本高；负载响应慢，输出纹波大；效率高，输入电压范围宽泛；支<br>
+持降压和升压；输出电流高，功率大；开关噪声大。一般都是可调型，通过FB反馈电阻调节;</p>
+
+<h2><a name="t1"></a>二、DCDC电路详细讲解</h2>
+
+<h4><a name="t2"></a>BUCK 电路</h4>
+
+<p><img src="BUCK%E7%94%B5%E8%B7%AF.png"></p>
+<center>buck电路</center>
+
+<p><span style="color:#be191c"><strong>开关管闭合时，能量一部分储存在电感L中，一部分供给输出;<br>
+开关管断开时，L通过二极管为输出端提供能量。</strong></span></p>
+
+<ul><li>
+	<p><strong>原理</strong> ：BUCK 变换器是降压式变换器，输出电压小于输入电压。当晶体管 M导通时，<span class="words-blog hl-git-1" data-tit="二极管" data-pretit="二极管">二极管</span>D截止，电流经电感流向负载，电感储存电能；当 M断开时，二极管导通，电感释放磁能，为负载提供能量。输出电压平均值 Vo=Vi×D，其中 D 为 PWM 波的占空比。
+	![](./3DCDC/buck公式.png)
+	</p>
+	</li><li>
+	<p><strong>特点</strong> ：电路简单，效率高，输出电压与输入电压极性相同。</p>
+	</li><li>
+	<p><strong>应用</strong> ：常用于需要降低电压的场合，如笔记本电脑的电源适配器、LED 驱动电源等。</p>
+	</li></ul>
+
+<h4><a name="t3"></a><span class="words-blog hl-git-1" data-tit="BOOST" data-pretit="boost">BOOST</span> 电路</h4>
+![](./3DCDC/boost电路.png)
+
+<center>boost电路</center>
+
+
+<p><span style="color:#be191c"><strong>当开关管导通的时候，输入的电压对电感充电。<br>
+当开关管关断时，电感有感应电压，输入的能量和电感能量一起向输出提供能量，此时二极管导通，因此这时候输出的电压肯定就比输入的电压高，从而实现升压。</strong></span></p>
+
+<ul><li>
+	<p><strong>原理</strong> ：BOOST 变换器是升压式变换器，输出电压大于输入电压。当 MOSFET 导通时，电感储存能量，电流流过电感和 MOSFET，二极管不导通；当 MOSFET 关断时，电感释放能量，产生高电压使二极管导通，电流流过二极管和负载。输出电压平均值 Vo=Vi/(1-D)，D 为<span class="words-blog hl-git-1" data-report-view="{&quot;spm&quot;:&quot;1001.2101.3001.10283&quot;,&quot;extra&quot;:&quot;{\&quot;words\&quot;:\&quot;占空比\&quot;,\&quot;isNewGitCodeAB\&quot;:\&quot;1\&quot;}&quot;}" data-tit="占空比" data-pretit="占空比">占空比</span>。</p>
+	</li></ul>
+
+<p><img src="boost%E5%85%AC%E5%BC%8F.png"></p>
+<ul><li>
+	<p><strong>特点</strong> ：输出电压高于输入电压，极性相同。</p>
+	</li><li>
+	<p><strong>应用</strong> ：适用于需要提升电压的场合，如手机充电器、荧光灯逆变器等。</p>
+	</li></ul>
+
+<h4><a name="t5"></a>BUCK-BOOST 电路</h4>
+
+<p><img src="buck-boost%E7%94%B5%E8%B7%AF.png"></p>
+<center>buck-boost电路</center>
+
+<p><span style="color:#be191c"><strong>开关管导通，二极管D反向截止，电感器储能。</strong></span></p>
+
+<p><span style="color:#be191c"><strong>开关管断开，电感存储的能量通过二极管传给输出端。</strong></span></p>
+
+<ul><li>
+	<p><strong>原理</strong> ：BUCK-BOOST 变换器是一种升降压式变换器，输出电压既可低于也可高于输入电压，但输出电压的极性与输入电压相反。当开关管导通时，输入电流流过电感直接到地，输出主要由电容放电维持；当开关管关闭时，电感电流从地流向负载和电容，并流经二极管回到电感。由伏秒平衡原理得 Vo=-Vi×D/(1-D)，当占空比 D 大于 1/2 时，输出电压绝对值大于输入电压，反之则小于输入电压。</p>
+	</li></ul>
+
+<p><img src="bb%E5%85%AC%E5%BC%8F.png"></p>
+<ul><li>
+	<p><strong>特点</strong> ：电路结构相对复杂，输出电压极性与输入相反，可通过调节占空比实现升降压。</p>
+	</li><li>
+	<p><strong>应用</strong> ：在一些需要灵活调节输出电压且对极性要求不高的场合应用较多，如汽车电子中的电源管理系统等。</p>
+	</li></ul>
+
+<h4><a name="t6"></a>反激电路</h4>
+
+<p><img src="%E5%8F%8D%E6%BF%80%E7%94%B5%E8%B7%AF.png"></p>
+<center>反激电路</center>
+
+<p><span style="color:#be191c"><strong>当功率开关管S导通时，电压将加在变压器T的初级绕组N1上，并将能量储存在初级绕组中，初级绕组同名端上为正电压，次级绕组的同名端和初级绕组相反，因此次级绕组输出的电压极性会使得整流二极管D截止，滤波电容C向负载供电;</strong></span></p>
+
+<p><span style="color:#be191c"><strong>当功率开关管S关断时，初级绕组N1会产生反向的电动势，次级绕组N2上的电压极性也会发生相应的改变，从而使输出端整流二极管D得到正向偏置而导通，初级绕组里的能量将传递至次级，对负载端供电。</strong></span></p>
+
+<ul><li>
+	<p><strong>原理</strong> ：开关管与<span class="words-blog hl-git-1" data-tit="变压器" data-pretit="变压器">变压器</span>原边串联，当开关管导通时，原边电流线性上升，能量储存在变压器磁芯中，负载由副边续流二极管和输出电容供电；当开关管截止时，原边电流切断，副边通过变压器的互感作用，将原边储存的能量传递给负载。</p>
+	</li></ul>
+
+<p><span style="color:#be191c"><strong>1.输出可以为正或为负，由线圈和二极管的极性决定。<br>
+2.输出电压可以大于或小于输入电压，由匝数比决定。<br>
+3.增加次级绕组和电路可以得到多个输出。</strong></span></p>
+
+<ul><li>
+	<p><strong>特点</strong> ：实现了输入输出的电气隔离，可在较宽的输入电压范围内提供稳定的输出电压， 输出电压极性可灵活配置 。</p>
+	</li><li>
+	<p><strong>应用</strong> ：常用于需要电气隔离的场合，如通信电源、工业控制电源等。</p>
+	</li></ul>
+
+<h4><a name="t7"></a>总结</h4>
+
+<p>BUCK、BOOST、BUCK-BOOST 和反激电路都是常见的 DC-DC 变换电路拓扑结构，各自具有不同的特点和适用场合。在实际应用中，需要根据具体的电源需求和系统要求，选择合适的电路拓扑结构，以实现高效、稳定的电源转换。</p>
 
     </div>
 
@@ -354,7 +454,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://labidaisy888.tech/2025/11/04/4guiyihua/" title="硬件进阶---器件归一化">http://labidaisy888.tech/2025/11/04/4guiyihua/</a>
+    <a href="http://labidaisy888.tech/2025/11/04/3DCDC/" title="硬件八股---DCDC基础知识讲解">http://labidaisy888.tech/2025/11/04/3DCDC/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -368,7 +468,7 @@
 
       <footer class="post-footer">  <!-- 也可以同步修改无图标时的符号 -->
           <div class="post-tags">
-              <a href="/tags/%E5%99%A8%E4%BB%B6%E5%BD%92%E4%B8%80%E5%8C%96/" rel="tag">📌 器件归一化</a>
+              <a href="/tags/DCDC/" rel="tag">📌 DCDC</a>
           </div>
 
         
@@ -377,12 +477,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2025/11/04/4kekaox/" rel="prev" title="硬件进阶---Ⅰ可靠性设计">
-      <i class="fa fa-chevron-left"></i> 硬件进阶---Ⅰ可靠性设计
+    <a href="/2025/11/04/3LDO/" rel="prev" title="硬件八股---LDO基础知识讲解">
+      <i class="fa fa-chevron-left"></i> 硬件八股---LDO基础知识讲解
     </a></div>
       <div class="post-nav-item">
-    <a href="/2025/11/04/3shousi/" rel="next" title="硬件八股---Ⅰ常见手撕电路：电流镜">
-      硬件八股---Ⅰ常见手撕电路：电流镜 <i class="fa fa-chevron-right"></i>
+    <a href="/2025/11/04/2yjkf/" rel="next" title="硬件开发流程---Ⅰ方案调研">
+      硬件开发流程---Ⅰ方案调研 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -443,7 +543,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、LDO和DCDC区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、DCDC电路详细讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">BUCK 电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">BOOST 电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">BUCK-BOOST 电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">反激电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
