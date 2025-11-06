@@ -8,7 +8,7 @@
       <link href="/2025/11/04/1hwj/"/>
       <url>/2025/11/04/1hwj/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://imgloc.com/image/7wPKce"><img src="https://i.imgs.ovh/2025/11/06/7wPKce.md.jpeg" alt="7wPKce.md.jpeg"></a></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<p><img src="_posts/1hwj/offer.jpg" alt="寒武纪2025届校园招聘录用通知书"></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
       
       
       <categories>
@@ -116,33 +116,6 @@
     
     
     <entry>
-      <title>硬件八股---Ⅰ常见手撕电路：电流镜</title>
-      <link href="/2025/11/04/3shousi/"/>
-      <url>/2025/11/04/3shousi/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 硬件八股知识划重点 </category>
-          
-          <category> 常见手撕电路讲解 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 电流镜 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>硬件开发流程---Ⅰ方案调研</title>
       <link href="/2025/11/04/2yjkf/"/>
       <url>/2025/11/04/2yjkf/</url>
@@ -162,6 +135,33 @@
         <tags>
             
             <tag> 硬件开发流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---Ⅰ常见手撕电路：电流镜</title>
+      <link href="/2025/11/04/3shousi/"/>
+      <url>/2025/11/04/3shousi/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 常见手撕电路讲解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电流镜 </tag>
             
         </tags>
       
