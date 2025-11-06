@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Console:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"labidaisy888.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"order":-1},"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本文介绍嵌入式领域常用的SPI、I2C、UART三种串行通信协议。SPI为同步协议，通信速度快、支持全双工，但引脚占用多；I2C仅需两引脚，支持多主多从和仲裁机制，速率较慢；UART为异步协议，电路简单、通信距离长，依赖波特率匹配且速率低。三者均采用串行传输，适用于嵌入式设备通信，需根据传输速率、硬件资源、通信距离等需求选择。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬件八股---三种通信协议I2C、SPI、UART优缺点">
+<meta property="og:url" content="http://labidaisy888.tech/2025/11/04/3ISUqubie/index.html">
+<meta property="og:site_name" content="Bunny兔的硬件工厂">
+<meta property="og:description" content="本文介绍嵌入式领域常用的SPI、I2C、UART三种串行通信协议。SPI为同步协议，通信速度快、支持全双工，但引脚占用多；I2C仅需两引脚，支持多主多从和仲裁机制，速率较慢；UART为异步协议，电路简单、通信距离长，依赖波特率匹配且速率低。三者均采用串行传输，适用于嵌入式设备通信，需根据传输速率、硬件资源、通信距离等需求选择。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3ISUqubie/SPI.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3ISUqubie/I2C.png">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3ISUqubie/UART.png">
+<meta property="article:published_time" content="2025-11-04T10:03:24.000Z">
+<meta property="article:modified_time" content="2025-11-06T13:18:29.700Z">
+<meta property="article:author" content="Bunny">
+<meta property="article:tag" content="I2C&#x2F;SPI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://labidaisy888.tech/2025/11/04/3ISUqubie/SPI.png">
+
+<link rel="canonical" href="http://labidaisy888.tech/2025/11/04/3ISUqubie/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>硬件八股---三种通信协议I2C、SPI、UART优缺点 | Bunny兔的硬件工厂</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bunny兔的硬件工厂</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">欢迎来到我的世界~</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="house-night fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-resources">
+
+    <a href="/resources/" rel="section"><i class="download fa-fw"></i>资源</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://labidaisy888.tech/2025/11/04/3ISUqubie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Bunny">
+      <meta itemprop="description" content="人生碌碌，竞短论长，却不道荣枯有数，得失难量。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny兔的硬件工厂">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          硬件八股---三种通信协议I2C、SPI、UART优缺点
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-11-04 18:03:24" itemprop="dateCreated datePublished" datetime="2025-11-04T18:03:24+08:00">2025-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-11-06 21:18:29" itemprop="dateModified" datetime="2025-11-06T21:18:29+08:00">2025-11-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">硬件八股知识划重点</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/%E9%AB%98%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">高频知识点</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/%E9%AB%98%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9/%E4%B8%89%E7%A7%8D%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AEI2C%E3%80%81SPI%E3%80%81UART%E4%BC%98%E7%BC%BA%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">三种通信协议I2C、SPI、UART优缺点</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2025/11/04/3ISUqubie/" class="post-meta-item leancloud_visitors" data-flag-title="硬件八股---三种通信协议I2C、SPI、UART优缺点" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2025/11/04/3ISUqubie/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2025/11/04/3ISUqubie/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文介绍嵌入式领域常用的SPI、I2C、UART三种串行通信协议。SPI为同步协议，通信速度快、支持全双工，但引脚占用多；I2C仅需两引脚，支持多主多从和仲裁机制，速率较慢；UART为异步协议，电路简单、通信距离长，依赖波特率匹配且速率低。三者均采用串行传输，适用于嵌入式设备通信，需根据传输速率、硬件资源、通信距离等需求选择。<br> <span id="more"></span></p>
+<h2><a name="t3"></a>SPI、I2C、UART：串行通信协议的 “三剑客”</h2>
+
+<p>在嵌入式系统和电子设备的通信领域，SPI、I2C 和 UART 是三种极为常见的串行通信协议，它们各自有着独特的特点和适用场景，犹如通信世界的 “三剑客”，在不同的战场上各显神通。</p>
+
+<h3><a name="t4"></a>一、SPI</h3>
+
+<h4><a name="t5"></a>工作原理</h4>
+
+<p><img src="SPI.png"></p>
+<p>SPI 是一种同步通信协议，采用主从模式，通常有四个引脚：MOSI（主设备数据输出，从设备数据输入）、MISO（主设备数据输入，从设备数据输出）、SCK（时钟信号，由主设备提供）和 SS（从设备选择信号，用于选择特定的从设备）。主设备通过 SCK 发出时钟信号，在时钟信号的驱动下，数据通过 MOSI 和 MISO 进行传输。</p>
+
+<h4><a name="t6"></a>优点</h4>
+
+<ul><li>
+	<p>通信速度极快，在硬件层面能达到较高的数据传输速率，适合大数据量的快速传输场景，如存储设备与处理器之间的数据交换。</p>
+	</li><li>
+	<p>可以同时支持全双工通信，主设备和从设备可以同时发送和接收数据，极大地提高了通信效率。</p>
+	</li></ul>
+
+<h4><a name="t7"></a>缺点</h4>
+
+<ul><li>
+	<p>需要较多的引脚，除了数据线和时钟线，每个从设备还需要一个独立的 SS 引脚，当从设备数量较多时，会占用大量的引脚资源，增加了硬件设计复杂度。</p>
+	</li><li>
+	<p>对总线的控制相对复杂，需要严格管理时钟信号和从设备选择信号，以确保数据传输的准确性。</p>
+	</li></ul>
+
+<h3><a name="t8"></a>二、I2C</h3>
+
+<h4><a name="t9"></a>工作原理</h4>
+
+<p><img src="I2C.png"></p>
+<p>I2C 也是一种同步通信协议，采用主从模式，仅使用两条引脚：SDA（数据线）和 SCL（时钟线）。主设备通过发送起始信号来启动通信，在 SCL 时钟信号的控制下，数据在 SDA 线上传输，每个从设备都有唯一的地址，主设备通过发送从设备地址来选择要通信的从设备。</p>
+
+<h4><a name="t10"></a>优点</h4>
+
+<ul>
+<li>
+	<p>引脚数量少，只需要两条引脚，大大节省了硬件资源，便于在空间受限的设备中使用，如小型传感器与微控制器之间的通信。</p>
+	</li>
+<li>
+	<p>支持多主多从通信，在一条 I2C 总线上可以连接多个主设备和多个从设备，具有很强的灵活性，能够构建复杂的通信网络。</p>
+	</li>
+<li>
+	<p>具有完善的仲裁机制，可以有效地避免多个主设备同时发起通信时的数据冲突，提高了系统的可靠性。</p>
+	</li>
+</ul>
+
+<h4><a name="t11"></a>缺点</h4>
+
+<ul><li>
+	<p>通信速度较 SPI 较慢，数据传输速率有限，在传输大数据量时效率较低，通常适用于低速率通信场景，如传感器数据采集和设备配置等。</p>
+	</li><li>
+	<p>由于是半双工通信，同一时刻数据只能在一个方向上传输，主设备和从设备不能同时发送和接收数据，通信效率相对较低。</p>
+	</li></ul>
+
+<h3><a name="t12"></a>三、UART</h3>
+
+<h4><a name="t13"></a>工作原理</h4>
+
+<p><img src="UART.png"></p>
+<p>UART 是一种异步通信协议，没有公共的时钟信号，通过在数据的开始和结束处添加起始位和停止位来标识数据的传输。它通常有两个引脚：TX（数据发送）和 RX（数据接收），发送方将数据按照一定的<span class="words-blog hl-git-1" data-tit="波特率" data-pretit="波特率">波特率</span>（数据传输速率）发送出去，接收方根据相同的波特率来接收数据。</p>
+
+<h4><a name="t14"></a>优点</h4>
+
+<ul><li>
+	<p>电路简单，无需时钟信号线，硬件设计相对简单，降低了硬件成本和复杂度，在一些简单的通信场景中易于实现，如调试信息的输出和简单的设备间通信。</p>
+	</li><li>
+	<p>通信距离相对较长，在适当的波特率下可以实现较远距离的数据传输，适用于一些对通信距离有一定要求的应用场景，如工业控制和远程通信等。</p>
+	</li></ul>
+
+<h4><a name="t15"></a>缺点</h4>
+
+<ul><li>
+	<p>由于是异步通信，没有统一的时钟信号，数据传输的准确性在一定程度上依赖于发送方和接收方的波特率匹配，如果波特率存在偏差，可能会导致数据错误。</p>
+	</li><li>
+	<p>数据传输速率相对较低，通常无法满足高速数据传输需求，一般适用于低速率、长距离的通信场景。</p>
+	</li></ul>
+
+<h3><a name="t16"></a>四、共同点</h3>
+
+<ol><li>
+	<p><strong>都是串行通信协议</strong> ：它们都采用串行传输方式，数据一位一位地在通信线路上进行传输，这使得它们在硬件资源占用上相对并行通信更少，适合在有限的空间和资源下进行数据通信，降低了硬件成本和复杂度。</p>
+	</li><li>
+	<p><strong>适用于嵌入式系统和电子设备</strong> ：在嵌入式系统和各种电子设备中都有广泛的应用，如微控制器与传感器、存储器、显示器等外围设备之间的通信，为设备之间的数据交互提供了灵活高效的解决方案。</p>
+	</li><li>
+	<p><strong>具有主从模式</strong> ：SPI 和 I2C 明确采用主从模式进行通信，UART 通常也可以在主从模式下工作，其中发送方可以看作是主设备，接收方是從设备，在一定程度上便于对通信过程进行管理和控制。</p>
+	</li></ol>
+
+<h3><a name="t17"></a>五、总结</h3>
+
+<p>SPI、I2C 和 UART 各自有着独特的优势和局限性，在实际应用中，我们需要根据具体的需求和场景来选择合适的通信协议。如果需要高速、大数据量的传输，SPI 可能是最佳选择；在对硬件资源要求高、多设备通信场景下，I2C 则更具优势；而对于简单的、长距离的低速率通信，UART 可以满足要求。了解它们的区别和共同点，有助于我们在嵌入式开发和电子设备设计中做出明智的选择，实现高效、可靠的数据通信。</p>
+
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+        <div class="reward-container">
+  <div>原创技术分享创作不易，您的支持将维护网站运行~</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Bunny 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Bunny 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bunny
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://labidaisy888.tech/2025/11/04/3ISUqubie/" title="硬件八股---三种通信协议I2C、SPI、UART优缺点">http://labidaisy888.tech/2025/11/04/3ISUqubie/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+
+
+
+      <footer class="post-footer">  <!-- 也可以同步修改无图标时的符号 -->
+          <div class="post-tags">
+              <a href="/tags/I2C-SPI/" rel="tag">📌 I2C/SPI</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/04/2yjkf/" rel="prev" title="硬件开发流程---1 方案调研">
+      <i class="fa fa-chevron-left"></i> 硬件开发流程---1 方案调研
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/11/04/3I2CSPI_R/" rel="next" title="硬件八股---I2C/SPI上拉电阻的原因">
+      硬件八股---I2C/SPI上拉电阻的原因 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">SPI、I2C、UART：串行通信协议的 “三剑客”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">一、SPI</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.2.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.3.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">二、I2C</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.2.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.2.3.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">三、UART</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.3.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.3.2.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.3.3.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">四、共同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.5.</span> <span class="nav-text">五、总结</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bunny"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Bunny</p>
+  <div class="site-description" itemprop="description">人生碌碌，竞短论长，却不道荣枯有数，得失难量。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Lily-Dai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Lily-Dai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      链接网站
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/weixin_52340051?spm=1000.2115.3001.5343" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_52340051?spm&#x3D;1000.2115.3001.5343" rel="noopener" target="_blank">CSDN主页</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bunny</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">12k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11 分钟</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.1k字</span>
+</div>
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'pCHtj5UDIsviyMPtDPhD89U1-gzGzoHsz',
+      appKey     : 'AcozsBfaxgzNsxDoNtfwQ9uM',
+      placeholder: "理性发言，友善互动，每个评论都会回~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":350,"height":700,"vOffset":-120},"mobile":{"show":true}});</script></body>
+</html>

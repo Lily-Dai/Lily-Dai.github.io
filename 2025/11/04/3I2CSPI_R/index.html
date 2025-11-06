@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Console:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"labidaisy888.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"order":-1},"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬件八股---I2C&#x2F;SPI上拉电阻的原因">
+<meta property="og:url" content="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/index.html">
+<meta property="og:site_name" content="Bunny兔的硬件工厂">
+<meta property="og:description" content="该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/I2C.png">
+<meta property="article:published_time" content="2025-11-04T10:03:24.000Z">
+<meta property="article:modified_time" content="2025-11-06T13:33:56.482Z">
+<meta property="article:author" content="Bunny">
+<meta property="article:tag" content="I2C&#x2F;SPI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/I2C.png">
+
+<link rel="canonical" href="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>硬件八股---I2C/SPI上拉电阻的原因 | Bunny兔的硬件工厂</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bunny兔的硬件工厂</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">欢迎来到我的世界~</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="house-night fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-resources">
+
+    <a href="/resources/" rel="section"><i class="download fa-fw"></i>资源</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Bunny">
+      <meta itemprop="description" content="人生碌碌，竞短论长，却不道荣枯有数，得失难量。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny兔的硬件工厂">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          硬件八股---I2C/SPI上拉电阻的原因
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-11-04 18:03:24" itemprop="dateCreated datePublished" datetime="2025-11-04T18:03:24+08:00">2025-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-11-06 21:33:56" itemprop="dateModified" datetime="2025-11-06T21:33:56+08:00">2025-11-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">硬件八股知识划重点</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/%E9%AB%98%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">高频知识点</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E5%85%AB%E8%82%A1%E7%9F%A5%E8%AF%86%E5%88%92%E9%87%8D%E7%82%B9/%E9%AB%98%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9/I2C-SPI%E4%B8%8A%E6%8B%89%E7%94%B5%E9%98%BB%E7%9A%84%E5%8E%9F%E5%9B%A0/" itemprop="url" rel="index"><span itemprop="name">I2C/SPI上拉电阻的原因</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2025/11/04/3I2CSPI_R/" class="post-meta-item leancloud_visitors" data-flag-title="硬件八股---I2C/SPI上拉电阻的原因" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2025/11/04/3I2CSPI_R/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2025/11/04/3I2CSPI_R/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。<br> <span id="more"></span></p>
+<div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">
+                <div id="content_views" class="htmledit_views atom-one-dark">
+                    <h2><a name="t0"></a>I2C 与 <span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span> 线路中电阻的作用及选型</h2> 
+<p>在数字通信领域，I2C 和 SPI 总线被广泛应用，而它们的线路设计中都有电阻的使用，这些电阻虽然小，却发挥着至关重要的作用，在画<span class="words-blog hl-git-1" data-tit="原理图" data-pretit="原理图">原理图</span>的时候，我们经常遇到这种</p>
+
+<p><img src="I2C.png"></p>
+<center>I2C模块说明书</center>
+
+<p>这是一个气体<span class="words-blog hl-git-1" data-tit="传感器" data-pretit="传感器">传感器</span>C2874215的说明书，它使用的是I2C协议，在前面讲过怎么分辨这几种协议：</p> 
+
+<p><a href="http://labidaisy888.tech/2025/11/04/3cxbx/" title="硬件八股---串行并行、全双工半双工、同步异步讲解">硬件八股---串行并行、全双工半双工、同步异步讲解</a></p> 
+<p>在这幅图中我们可以看到，SDA和SCL都接了上拉电阻，为什么呢？</p> 
+<p>这也是选型的时候需要注意的问题，这个电阻需要选多大的呢？</p> 
+<p>下面就围绕这个问题讲一下。</p> 
+<h3><a name="t1"></a>I2C 总线的上拉电阻</h3> 
+<h4><a name="t2"></a><strong>原因</strong></h4> 
+<p>I2C 总线采用开漏（开集电极）结构的数据线（SDA）和时钟线（SCL）。开漏输出的特点是只能将信号拉低，不能主动拉高，这就需要外部的上拉电阻来确保信号线在没有被拉低时处于高电平状态，从而实现信号的正常传输。当总线空闲时，上拉电阻将 SDA 和 SCL 拉高，使得总线处于高电平等待状态。</p> 
+<h4><a name="t3"></a><strong>选型</strong></h4> 
+<ul><li><strong>阻值选择</strong> ：I2C 总线数据传输速率与上拉电阻阻值密切相关。一般选择在 1 - 10kΩ 范围内。若阻值过小，虽然能加快信号上升沿，但会增加电源功耗；阻值过大则会使上升时间变长，影响数据传输速度。常见的阻值有 1.5kΩ、2.2kΩ、4.7kΩ 等。</li><li><strong>功率选择</strong> ：根据总线上的设备数量和工作电流来确定上拉电阻的功率。一般情况下，0.125W - 0.25W 的普通电阻即可满足要求。</li></ul> 
+<h3><a name="t4"></a>SPI 总线的电阻</h3>
+<h4><a name="t5"></a><strong>原因</strong></h4> 
+<p>在 SPI 通信中，虽然主设备和从设备之间通常采用推挽输出（可输出高、低电平），但为了防止信号<span class="words-blog hl-git-1" data-tit="反射" data-pretit="反射">反射</span>、匹配阻抗以及在多从设备连接时保证信号的稳定性和完整性，也会使用电阻。</p> 
+<ul><li><strong>防止信号反射</strong> ：当信号在传输线上传播遇到阻抗不匹配的情况时，会产生反射信号，影响通信质量。在 SPI 总线的 MISO（从设备数据输出）和 MOSI（主设备数据输出）线上适当接入电阻，可以吸收反射信号，减少其对总线的干扰。</li><li><strong>匹配阻抗</strong> ：通过在 SPI 总线线上接入合适阻值的电阻，使传输线的特性阻抗与源端和负载端的阻抗相匹配，降低信号的反射系数，提高信号的传输效率和稳定性。</li><li><strong>多从设备连接</strong> ：在 SPI 总线连接多个从设备时，每个从设备的使能信号（CS）线上接入上拉或下拉电阻，确保在未被选中时，从设备不会干扰总线通信。</li></ul> 
+<h4><a name="t6"></a><strong>选型</strong></h4> 
+<ul><li><strong>上拉 / 下拉电阻</strong> ：对于 SPI 总线上的 CS 线，在选择上拉或下拉电阻时，阻值通常在 1kΩ - 10kΩ 范围内。如使用上拉电阻，阻值过小会导致 CS 线在未选中时功耗较大；阻值过大则可能使 CS 信号的电平转换速度变慢。一般可以选择 10kΩ 左右的上拉电阻。</li><li><strong>终端匹配电阻</strong> ：用于防止信号反射和匹配阻抗的终端匹配电阻，其阻值应与传输线的特性阻抗相匹配。常见的传输线特性阻抗在 50Ω - 100Ω 之间，因此终端匹配电阻可选择 75Ω、100Ω 等。</li></ul> 
+<p>在实际应用中，需要综合考虑通信速率、传输距离、设备功耗、工作环境等因素来精确选择电阻的阻值和功率，以保证 I2C 和 SPI 总线通信的可靠性和稳定性。</p>
+                </div><div><div></div></div>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+        <div class="reward-container">
+  <div>原创技术分享创作不易，您的支持将维护网站运行~</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Bunny 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Bunny 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bunny
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://labidaisy888.tech/2025/11/04/3I2CSPI_R/" title="硬件八股---I2C&#x2F;SPI上拉电阻的原因">http://labidaisy888.tech/2025/11/04/3I2CSPI_R/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+
+
+
+      <footer class="post-footer">  <!-- 也可以同步修改无图标时的符号 -->
+          <div class="post-tags">
+              <a href="/tags/I2C-SPI/" rel="tag">📌 I2C/SPI</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/11/04/3ISUqubie/" rel="prev" title="硬件八股---三种通信协议I2C、SPI、UART优缺点">
+      <i class="fa fa-chevron-left"></i> 硬件八股---三种通信协议I2C、SPI、UART优缺点
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/11/04/3DCDC/" rel="next" title="硬件八股---DCDC基础知识讲解">
+      硬件八股---DCDC基础知识讲解 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#content_views"><span class="nav-number">1.</span> <span class="nav-text">I2C 与 SPI 线路中电阻的作用及选型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.1.</span> <span class="nav-text">I2C 总线的上拉电阻</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#content_views"><span class="nav-number">1.1.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#content_views"><span class="nav-number">1.1.2.</span> <span class="nav-text">选型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content_views"><span class="nav-number">1.2.</span> <span class="nav-text">SPI 总线的电阻</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#content_views"><span class="nav-number">1.2.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#content_views"><span class="nav-number">1.2.2.</span> <span class="nav-text">选型</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bunny"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Bunny</p>
+  <div class="site-description" itemprop="description">人生碌碌，竞短论长，却不道荣枯有数，得失难量。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Lily-Dai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Lily-Dai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      链接网站
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.csdn.net/weixin_52340051?spm=1000.2115.3001.5343" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_52340051?spm&#x3D;1000.2115.3001.5343" rel="noopener" target="_blank">CSDN主页</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bunny</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">12k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11 分钟</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.1k字</span>
+</div>
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'pCHtj5UDIsviyMPtDPhD89U1-gzGzoHsz',
+      appKey     : 'AcozsBfaxgzNsxDoNtfwQ9uM',
+      placeholder: "理性发言，友善互动，每个评论都会回~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":350,"height":700,"vOffset":-120},"mobile":{"show":true}});</script></body>
+</html>

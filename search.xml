@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>寒武纪面试经验分享</title>
-      <link href="/2025/11/04/1hwj/"/>
-      <url>/2025/11/04/1hwj/</url>
-      
-        <content type="html"><![CDATA[<p><img src="offer.jpg"></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 秋招面试经验分享 </category>
-          
-          <category> 大厂面试经验 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 寒武纪 </tag>
-            
-            <tag> 面试经验 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>重庆长安汽车面试经验分享</title>
       <link href="/2025/11/04/1caqc/"/>
       <url>/2025/11/04/1caqc/</url>
@@ -62,25 +33,27 @@
     
     
     <entry>
-      <title>万用表的使用教程</title>
-      <link href="/2025/11/04/2cyyq/"/>
-      <url>/2025/11/04/2cyyq/</url>
+      <title>寒武纪面试经验分享</title>
+      <link href="/2025/11/04/1hwj/"/>
+      <url>/2025/11/04/1hwj/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="offer.jpg"></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
       
       
       <categories>
           
-          <category> 硬件类基础知识分享 </category>
+          <category> 秋招面试经验分享 </category>
           
-          <category> 常用仪器仪表使用 </category>
+          <category> 大厂面试经验 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 常用仪器仪表使用 </tag>
+            <tag> 寒武纪 </tag>
+            
+            <tag> 面试经验 </tag>
             
         </tags>
       
@@ -89,11 +62,11 @@
     
     
     <entry>
-      <title>硬件开发流程---Ⅰ方案调研</title>
-      <link href="/2025/11/04/2yjkf/"/>
-      <url>/2025/11/04/2yjkf/</url>
+      <title>硬件开发流程---4 PCB设计</title>
+      <link href="/2025/11/04/2PCBsj/"/>
+      <url>/2025/11/04/2PCBsj/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -101,6 +74,8 @@
           <category> 硬件类基础知识分享 </category>
           
           <category> 硬件开发流程 </category>
+          
+          <category> 4 PCB设计 </category>
           
       </categories>
       
@@ -116,11 +91,40 @@
     
     
     <entry>
+      <title>万用表的使用教程</title>
+      <link href="/2025/11/04/2cyyq/"/>
+      <url>/2025/11/04/2cyyq/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 常用仪器仪表使用 </category>
+          
+          <category> 万用表的使用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常用仪器仪表使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>硬件八股---DCDC基础知识讲解</title>
       <link href="/2025/11/04/3DCDC/"/>
       <url>/2025/11/04/3DCDC/</url>
       
-        <content type="html"><![CDATA[<p>DC-DC 电源是将一个固定的直流电压变换为可变的直流电压的电路，也称为直流斩波器，有 BUCK（降压）、BOOST（升压）、BUCK-BOOST（升降压）和反激等多种拓扑结构。其工作方式主要有 PWM 波 “定频调宽” 和 PFM 波 “定宽调频” 两种，一般采用 PWM 波控制开关管的通断。<br> <span id="more"></span></p><p><img src="%E5%BC%80%E5%A4%B4.gif"></p><h2><a name="t0"></a>一、LDO和DCDC区别</h2><ul><li><strong>LDO</strong></li></ul><p>外围器件少，电路简单，成本低，负载响应快，输出纹波小；效率低，输入输出压差不能太大；<br>只能降压;噪声小，最低的静态电流，分为可调和固定型；目前最大的LDO为5A。</p><ul><li><strong>DC-DC</strong></li></ul><p>外围器件多，电路复杂，成本高；负载响应慢，输出纹波大；效率高，输入电压范围宽泛；支<br>持降压和升压；输出电流高，功率大；开关噪声大。一般都是可调型，通过FB反馈电阻调节;</p><h2><a name="t1"></a>二、DCDC电路详细讲解</h2><h4><a name="t2"></a>BUCK 电路</h4><p><img src="BUCK%E7%94%B5%E8%B7%AF.png"></p><center>buck电路</center><p><span style="color:#be191c"><strong>开关管闭合时，能量一部分储存在电感L中，一部分供给输出;<br>开关管断开时，L通过二极管为输出端提供能量。</strong></span></p><ul><li><p><strong>原理</strong> ：BUCK 变换器是降压式变换器，输出电压小于输入电压。当晶体管 M导通时，<span class="words-blog hl-git-1" data-tit="二极管" data-pretit="二极管">二极管</span>D截止，电流经电感流向负载，电感储存电能；当 M断开时，二极管导通，电感释放磁能，为负载提供能量。输出电压平均值 Vo=Vi×D，其中 D 为 PWM 波的占空比。![](./3DCDC/buck公式.png)</p></li><li><p><strong>特点</strong> ：电路简单，效率高，输出电压与输入电压极性相同。</p></li><li><p><strong>应用</strong> ：常用于需要降低电压的场合，如笔记本电脑的电源适配器、LED 驱动电源等。</p></li></ul><h4><a name="t3"></a><span class="words-blog hl-git-1" data-tit="BOOST" data-pretit="boost">BOOST</span> 电路</h4>![](./3DCDC/boost电路.png)<center>boost电路</center><p><span style="color:#be191c"><strong>当开关管导通的时候，输入的电压对电感充电。<br>当开关管关断时，电感有感应电压，输入的能量和电感能量一起向输出提供能量，此时二极管导通，因此这时候输出的电压肯定就比输入的电压高，从而实现升压。</strong></span></p><ul><li><p><strong>原理</strong> ：BOOST 变换器是升压式变换器，输出电压大于输入电压。当 MOSFET 导通时，电感储存能量，电流流过电感和 MOSFET，二极管不导通；当 MOSFET 关断时，电感释放能量，产生高电压使二极管导通，电流流过二极管和负载。输出电压平均值 Vo=Vi/(1-D)，D 为<span class="words-blog hl-git-1" data-report-view="{&quot;spm&quot;:&quot;1001.2101.3001.10283&quot;,&quot;extra&quot;:&quot;{\&quot;words\&quot;:\&quot;占空比\&quot;,\&quot;isNewGitCodeAB\&quot;:\&quot;1\&quot;}&quot;}" data-tit="占空比" data-pretit="占空比">占空比</span>。</p></li></ul><p><img src="boost%E5%85%AC%E5%BC%8F.png"></p><ul><li><p><strong>特点</strong> ：输出电压高于输入电压，极性相同。</p></li><li><p><strong>应用</strong> ：适用于需要提升电压的场合，如手机充电器、荧光灯逆变器等。</p></li></ul><h4><a name="t5"></a>BUCK-BOOST 电路</h4><p><img src="buck-boost%E7%94%B5%E8%B7%AF.png"></p><center>buck-boost电路</center><p><span style="color:#be191c"><strong>开关管导通，二极管D反向截止，电感器储能。</strong></span></p><p><span style="color:#be191c"><strong>开关管断开，电感存储的能量通过二极管传给输出端。</strong></span></p><ul><li><p><strong>原理</strong> ：BUCK-BOOST 变换器是一种升降压式变换器，输出电压既可低于也可高于输入电压，但输出电压的极性与输入电压相反。当开关管导通时，输入电流流过电感直接到地，输出主要由电容放电维持；当开关管关闭时，电感电流从地流向负载和电容，并流经二极管回到电感。由伏秒平衡原理得 Vo=-Vi×D/(1-D)，当占空比 D 大于 1/2 时，输出电压绝对值大于输入电压，反之则小于输入电压。</p></li></ul><p><img src="bb%E5%85%AC%E5%BC%8F.png"></p><ul><li><p><strong>特点</strong> ：电路结构相对复杂，输出电压极性与输入相反，可通过调节占空比实现升降压。</p></li><li><p><strong>应用</strong> ：在一些需要灵活调节输出电压且对极性要求不高的场合应用较多，如汽车电子中的电源管理系统等。</p></li></ul><h4><a name="t6"></a>反激电路</h4><p><img src="%E5%8F%8D%E6%BF%80%E7%94%B5%E8%B7%AF.png"></p><center>反激电路</center><p><span style="color:#be191c"><strong>当功率开关管S导通时，电压将加在变压器T的初级绕组N1上，并将能量储存在初级绕组中，初级绕组同名端上为正电压，次级绕组的同名端和初级绕组相反，因此次级绕组输出的电压极性会使得整流二极管D截止，滤波电容C向负载供电;</strong></span></p><p><span style="color:#be191c"><strong>当功率开关管S关断时，初级绕组N1会产生反向的电动势，次级绕组N2上的电压极性也会发生相应的改变，从而使输出端整流二极管D得到正向偏置而导通，初级绕组里的能量将传递至次级，对负载端供电。</strong></span></p><ul><li><p><strong>原理</strong> ：开关管与<span class="words-blog hl-git-1" data-tit="变压器" data-pretit="变压器">变压器</span>原边串联，当开关管导通时，原边电流线性上升，能量储存在变压器磁芯中，负载由副边续流二极管和输出电容供电；当开关管截止时，原边电流切断，副边通过变压器的互感作用，将原边储存的能量传递给负载。</p></li></ul><p><span style="color:#be191c"><strong>1.输出可以为正或为负，由线圈和二极管的极性决定。<br>2.输出电压可以大于或小于输入电压，由匝数比决定。<br>3.增加次级绕组和电路可以得到多个输出。</strong></span></p><ul><li><p><strong>特点</strong> ：实现了输入输出的电气隔离，可在较宽的输入电压范围内提供稳定的输出电压， 输出电压极性可灵活配置 。</p></li><li><p><strong>应用</strong> ：常用于需要电气隔离的场合，如通信电源、工业控制电源等。</p></li></ul><h4><a name="t7"></a>总结</h4><p>BUCK、BOOST、BUCK-BOOST 和反激电路都是常见的 DC-DC 变换电路拓扑结构，各自具有不同的特点和适用场合。在实际应用中，需要根据具体的电源需求和系统要求，选择合适的电路拓扑结构，以实现高效、稳定的电源转换。</p>]]></content>
+        <content type="html"><![CDATA[<p>DC-DC 电源是将一个固定的直流电压变换为可变的直流电压的电路，也称为直流斩波器，有 BUCK（降压）、BOOST（升压）、BUCK-BOOST（升降压）和反激等多种拓扑结构。其工作方式主要有 PWM 波 “定频调宽” 和 PFM 波 “定宽调频” 两种，一般采用 PWM 波控制开关管的通断。<br> <span id="more"></span></p><p><img src="%E5%BC%80%E5%A4%B4.gif"></p><h2><a name="t0"></a>一、LDO和DCDC区别</h2><ul><li><strong>LDO</strong></li></ul><p>外围器件少，电路简单，成本低，负载响应快，输出纹波小；效率低，输入输出压差不能太大；只能降压;噪声小，最低的静态电流，分为可调和固定型；目前最大的LDO为5A。</p><ul><li><strong>DC-DC</strong></li></ul><p>外围器件多，电路复杂，成本高；负载响应慢，输出纹波大；效率高，输入电压范围宽泛；支<br>持降压和升压；输出电流高，功率大；开关噪声大。一般都是可调型，通过FB反馈电阻调节;</p><h2><a name="t1"></a>二、DCDC电路详细讲解</h2><h4><a name="t2"></a>BUCK 电路</h4><p><img src="BUCK%E7%94%B5%E8%B7%AF.png"></p><center>buck电路</center><p><img src="buck%E5%85%AC%E5%BC%8F.png"></p><center>buck公式</center><p><span style="color:#be191c"><strong>开关管闭合时，能量一部分储存在电感L中，一部分供给输出;</strong></span></p><p><span style="color:#be191c"><strong>开关管断开时，L通过二极管为输出端提供能量。</strong></span></p><ul><li><p><strong>原理</strong> ：BUCK 变换器是降压式变换器，输出电压小于输入电压。当晶体管 M导通时，<span class="words-blog hl-git-1" data-tit="二极管" data-pretit="二极管">二极管</span>D截止，电流经电感流向负载，电感储存电能；当 M断开时，二极管导通，电感释放磁能，为负载提供能量。输出电压平均值 Vo=Vi×D，其中 D 为 PWM 波的占空比。</p></li><li><p><strong>特点</strong> ：电路简单，效率高，输出电压与输入电压极性相同。</p></li><li><p><strong>应用</strong> ：常用于需要降低电压的场合，如笔记本电脑的电源适配器、LED 驱动电源等。</p></li></ul><h4><a name="t3"></a><span class="words-blog hl-git-1" data-tit="BOOST" data-pretit="boost">BOOST</span> 电路</h4><p><img src="boost%E7%94%B5%E8%B7%AF.png"></p><center>boost电路</center><p><img src="boost%E5%85%AC%E5%BC%8F.png"></p><center>boost公式</center><p><span style="color:#be191c"><strong>当开关管导通的时候，输入的电压对电感充电。</strong></span></p><p><span style="color:#be191c"><strong>当开关管关断时，电感有感应电压，输入的能量和电感能量一起向输出提供能量，此时二极管导通，因此这时候输出的电压肯定就比输入的电压高，从而实现升压。</strong></span></p><ul><li><p><strong>原理</strong> ：BOOST 变换器是升压式变换器，输出电压大于输入电压。当 MOSFET 导通时，电感储存能量，电流流过电感和 MOSFET，二极管不导通；当 MOSFET 关断时，电感释放能量，产生高电压使二极管导通，电流流过二极管和负载。输出电压平均值 Vo=Vi/(1-D)，D 为<span class="words-blog hl-git-1" data-report-view="{&quot;spm&quot;:&quot;1001.2101.3001.10283&quot;,&quot;extra&quot;:&quot;{\&quot;words\&quot;:\&quot;占空比\&quot;,\&quot;isNewGitCodeAB\&quot;:\&quot;1\&quot;}&quot;}" data-tit="占空比" data-pretit="占空比">占空比</span>。</p></li></ul><ul><li><p><strong>特点</strong> ：输出电压高于输入电压，极性相同。</p></li><li><p><strong>应用</strong> ：适用于需要提升电压的场合，如手机充电器、荧光灯逆变器等。</p></li></ul><h4><a name="t5"></a>BUCK-BOOST 电路</h4><p><img src="buck-boost%E7%94%B5%E8%B7%AF.png"></p><center>buck-boost电路</center><p><img src="bb%E5%85%AC%E5%BC%8F.png"></p><center>buck-boost公式</center><p><span style="color:#be191c"><strong>开关管导通，二极管D反向截止，电感器储能。</strong></span></p><p><span style="color:#be191c"><strong>开关管断开，电感存储的能量通过二极管传给输出端。</strong></span></p><ul><li><p><strong>原理</strong> ：BUCK-BOOST 变换器是一种升降压式变换器，输出电压既可低于也可高于输入电压，但输出电压的极性与输入电压相反。当开关管导通时，输入电流流过电感直接到地，输出主要由电容放电维持；当开关管关闭时，电感电流从地流向负载和电容，并流经二极管回到电感。由伏秒平衡原理得 Vo=-Vi×D/(1-D)，当占空比 D 大于 1/2 时，输出电压绝对值大于输入电压，反之则小于输入电压。</p></li></ul><ul><li><p><strong>特点</strong> ：电路结构相对复杂，输出电压极性与输入相反，可通过调节占空比实现升降压。</p></li><li><p><strong>应用</strong> ：在一些需要灵活调节输出电压且对极性要求不高的场合应用较多，如汽车电子中的电源管理系统等。</p></li></ul><h4><a name="t6"></a>反激电路</h4><p><img src="%E5%8F%8D%E6%BF%80%E7%94%B5%E8%B7%AF.png"></p><center>反激电路</center><p><span style="color:#be191c"><strong>当功率开关管S导通时，电压将加在变压器T的初级绕组N1上，并将能量储存在初级绕组中，初级绕组同名端上为正电压，次级绕组的同名端和初级绕组相反，因此次级绕组输出的电压极性会使得整流二极管D截止，滤波电容C向负载供电;</strong></span></p><p><span style="color:#be191c"><strong>当功率开关管S关断时，初级绕组N1会产生反向的电动势，次级绕组N2上的电压极性也会发生相应的改变，从而使输出端整流二极管D得到正向偏置而导通，初级绕组里的能量将传递至次级，对负载端供电。</strong></span></p><ul><li><p><strong>原理</strong> ：开关管与<span class="words-blog hl-git-1" data-tit="变压器" data-pretit="变压器">变压器</span>原边串联，当开关管导通时，原边电流线性上升，能量储存在变压器磁芯中，负载由副边续流二极管和输出电容供电；当开关管截止时，原边电流切断，副边通过变压器的互感作用，将原边储存的能量传递给负载。</p></li></ul><p><span style="color:#be191c"><strong>1.输出可以为正或为负，由线圈和二极管的极性决定。</strong></span></p><p><span style="color:#be191c"><strong>2.输出电压可以大于或小于输入电压，由匝数比决定。</strong></span></p><p><span style="color:#be191c"><strong>3.增加次级绕组和电路可以得到多个输出。</strong></span></p><ul><li><p><strong>特点</strong> ：实现了输入输出的电气隔离，可在较宽的输入电压范围内提供稳定的输出电压， 输出电压极性可灵活配置 。</p></li><li><p><strong>应用</strong> ：常用于需要电气隔离的场合，如通信电源、工业控制电源等。</p></li></ul><h4><a name="t7"></a>总结</h4><p>BUCK、BOOST、BUCK-BOOST 和反激电路都是常见的 DC-DC 变换电路拓扑结构，各自具有不同的特点和适用场合。在实际应用中，需要根据具体的电源需求和系统要求，选择合适的电路拓扑结构，以实现高效、稳定的电源转换。</p>]]></content>
       
       
       <categories>
@@ -128,6 +132,8 @@
           <category> 硬件八股知识划重点 </category>
           
           <category> 高频知识点 </category>
+          
+          <category> DCDC基础知识讲解 </category>
           
       </categories>
       
@@ -143,11 +149,11 @@
     
     
     <entry>
-      <title>硬件八股---LDO基础知识讲解</title>
-      <link href="/2025/11/04/3LDO/"/>
-      <url>/2025/11/04/3LDO/</url>
+      <title>硬件八股---I2C/SPI上拉电阻的原因</title>
+      <link href="/2025/11/04/3I2CSPI_R/"/>
+      <url>/2025/11/04/3I2CSPI_R/</url>
       
-        <content type="html"><![CDATA[<h2 id="一、问题提出"><a href="#一、问题提出" class="headerlink" title="一、问题提出"></a>一、问题提出</h2><p>经常，我们会在电路中遇到这两种LDO</p><p>带MOS管的</p><p><img src="%E5%B8%A6mos%E7%AE%A1%E7%9A%84LDO.png"></p><center>带mos管的LDO</center><p>带三极管的</p><p><img src="%E5%B8%A6%E4%B8%89%E6%9E%81%E7%AE%A1%E7%9A%84LDO.png"></p><center>带三极管的LDO</center><p>那么这两种具体有什么区别呢？</p><p><strong>当输出电压波动的时候，LDO内部的负反馈调节机制怎样去削弱这种波动，使得输出电压平稳？</strong></p><h2 id="二、各部分特性阐述"><a href="#二、各部分特性阐述" class="headerlink" title="二、各部分特性阐述"></a>二、各部分特性阐述</h2><h3 id="三极管特性"><a href="#三极管特性" class="headerlink" title="三极管特性"></a>三极管特性</h3><p>首先阐述一下三极管的特性。</p><p>参考了这篇文章：<a href="https://blog.csdn.net/Yin_w/article/details/132371836" title="NPN型三极管与PNP型三极管基本原理_npn型3极管-CSDN博客">NPN型三极管与PNP型三极管基本原理_npn型3极管-CSDN博客</a></p><p>三极管有两种，NPN型和PNP型，他们的特点也不一样</p><p><strong>电流特性le&#x3D;lb+lc</strong></p><p>1.根据电流的连续性，发射极电流(le)是由基极电流(Ib)和集电极电流(lc)组成的即:le&#x3D;lb+lc<br>2.这是三极管工作中的基本电流关系，表明基极电流和集电极电流是发射极电流的组成部分。</p><p><strong>放大倍数β</strong></p><p>1.由于基极电流非常小，而集电极电流则是由基极电流控制的，对于参杂浓度确定的晶体管，发射机扩散出来的自由电子与基极的空穴数量都是固定的个数，而且有一定的比例关系，我们可以定义为三极管的放大倍数(增益)，通常用β来表示，这个参数称为电流增益，它表示基极电流(Ib)与集电极电流(lc)之间的比例关系:Ic&#x3D;βxIb<br>2.因此，集电极电流是基极电流的放大倍数，这个倍数是三极管的一个关键特性，通常在几十到几百之间</p><p><strong>导通条件</strong></p><p>1.针对NPN的三极管，需要对基极添加<strong>高电平</strong>，并在B与E电压差大于0.7v时，此时Vc &gt; Vb &gt; Ve，三极管导通，电流从c极流向e极，基极负载电流是流向三极管的基极。</p><p>2.针对PNP的三极管，需要对基极添加<strong>低电平</strong>，并在B与E电压差大于0.7v时，此时Vc &lt; Vb&lt; Ve，三极管导通，电流从e极流向c极，基极负载电流是流出三极管的基极。</p><p>可以看下面这个</p><p><img src="%E4%B8%89%E6%9E%81%E7%AE%A1%E8%AE%B2%E8%A7%A3.png"></p><center>三极管讲解</center><p><strong>集电极电流变化</strong></p><p>虽然集电极电流是由外部电源（Vce）提供的，但其大小受基极电流（Ib）的控制，形成电流放大效应，基极电流越大，集电极电流也越大。可以参考三极管的输出特性曲线</p><p><img src="%E4%B8%89%E6%9E%81%E7%AE%A1%E8%BE%93%E5%87%BA%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png"></p><center>三极管输出特性曲线</center><p>三极管工作在放大区的时候，基极电流越大，集电极电流就越大。</p><h3 id="MOS管特性"><a href="#MOS管特性" class="headerlink" title="MOS管特性"></a>MOS管特性</h3><p>看了前面的三极管，对mos管应该有更直观的认识。</p><p>MOS管也有两种，PMOS管和NMOS管，还有耗尽型和增强型，PMOS和NMOS的特性和三极管可以对照着记忆。主要把三个极替换成了d，g，s来表示，栅极g&#x3D;基极b；漏极d&#x3D;集电极c；源极s&#x3D;发射极e</p><p><img src="N%E6%B2%9F%E9%81%93.png"></p><p><img src="P%E6%B2%9F%E9%81%93.png"></p><center>场效应管讲解</center><p>先复习一下N沟道的输出特性曲线和转移特性曲线。这图一看比较复杂，但是如果把它和三极管的混合着看，能够发现一些规律。</p><p><img src="N%E6%B2%9F%E9%81%93%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png"></p><p>观察可变电阻区，也就是Ⅰ区，当栅源电压不变的时候，漏极电流Id随着漏源电压Uds的增加近似按直线上升。在整个曲线上，Ugs的绝对值增大的时候，漏极电流Id在减小。注意这里说的是N沟道，也就是NMOS管。P沟道的变化规律相反。</p><p><img src="%E7%BB%93%E5%9E%8Bmos%E7%AE%A1%E7%89%B9%E6%80%A7.png"></p><center>结型mos管特性</center><h3 id="运放特性"><a href="#运放特性" class="headerlink" title="运放特性"></a>运放特性</h3><p>这里主要讲一下误差放大器，先记住，误差放大器是带负反馈的，那么它其实工作在线性区，此时虚短和虚断都是存在的。因此可以根据这个去进行芯片选型。</p><p><img src="%E8%AF%AF%E5%B7%AE%E6%94%BE%E5%A4%A7%E5%99%A8%E8%A7%A3%E9%87%8A.png"></p><center>误差放大器解释</center><p>运放中还有差动放大器等，这些我后面再出教程解释。</p><h2 id="三、回答问题"><a href="#三、回答问题" class="headerlink" title="三、回答问题"></a>三、回答问题</h2><p>根据前面所讲的这几个特性，结合起来再回过去看前面提出的两种电路。</p><h3 id="NPN管LDO"><a href="#NPN管LDO" class="headerlink" title="NPN管LDO"></a>NPN管LDO</h3><p>带三极管的LDO中，首先注意到，<strong>参考电压Uref在同相输入端输入，并且用的三极管是NPN管</strong></p><p><img src="%E5%B8%A6%E4%B8%89%E6%9E%81%E7%AE%A1%E7%9A%84LDO.png"></p><center>带三极管的LDO</center><p><strong>输出电压变化的情况：</strong></p><p>1. 当输出电压UO变大的时候，会导致输出电压UQ变大，也就是UQ&gt;Uref的时候，误差放大器会倾向于使输入的电压相等，运放的输出电压是U+减去U-，因此输出电压会变小，因此电流Ir会变小。</p><p>2. 从三极管VT看，此时基极电流变小，那么集电极电流和发射极电流都会变小，因此UO也会变小，因此这种电路能够有效抵抗UO变大的情况。</p><p><strong>参考电压变化的情况：</strong></p><p>1.当参考电压Uref变大的时候，因为是同相输入端变大，因此输出电流也会变大</p><p>2.从三极管上看，基极输入电流变大，发射极电流也会变大，因此UQ也会变大，传到运放的反相输入端，<strong>抵消了误差放大器输出变大的趋势</strong></p><h3 id="PMOS管LDO"><a href="#PMOS管LDO" class="headerlink" title="PMOS管LDO"></a>PMOS管LDO</h3><p>带MOS管的LDO中，特别注意到，<strong>参考电压是从反相输入端输入，用的MOS管是PMOS管</strong></p><p><img src="%E5%B8%A6mos%E7%AE%A1%E7%9A%84LDO.png"></p><center>带mos管的LDO</center><p><strong>输出电压变化的情况：</strong></p><p>1.当输出电压VOUT变大的时候，会导致VFB变大，同样误差放大器会倾向于使输入的电压相等，运放的输出电压是U+减去U-，因此输出电压会变大。</p><p>2.从运放这里看，也就是误差放大器这里看，VIN不变，UG变大，那么UGS会变大，根据PMOS管的性质，UGS变大，Id会变小，也就是漏极电流会变小，导致VOUT也会变小，因此地抵消了VOUT变大的情况。</p><p><strong>参考电压变化的情况：</strong></p><p>1.当参考电压Uref变大的时候，因为是反相输入端变大，因此输出电压会变小</p><p>2.从PMOS管上看，Ug变小，VIN不变，Ugs变小，则漏极电流会变大，使得VFB变大，传到运放的同相输入端，<strong>抵消了误差放大器输出变小的趋势。</strong></p><p>完结撒花！都看到这里了！不点个关注吗？主页还有更详细的教程哦！🥺🥺🥺</p>]]></content>
+        <content type="html"><![CDATA[<p>该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。<br> <span id="more"></span></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a>I2C 与 <span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span> 线路中电阻的作用及选型</h2> <p>在数字通信领域，I2C 和 SPI 总线被广泛应用，而它们的线路设计中都有电阻的使用，这些电阻虽然小，却发挥着至关重要的作用，在画<span class="words-blog hl-git-1" data-tit="原理图" data-pretit="原理图">原理图</span>的时候，我们经常遇到这种</p><p><img src="I2C.png"></p><center>I2C模块说明书</center><p>这是一个气体<span class="words-blog hl-git-1" data-tit="传感器" data-pretit="传感器">传感器</span>C2874215的说明书，它使用的是I2C协议，在前面讲过怎么分辨这几种协议：</p> <p><a href="http://labidaisy888.tech/2025/11/04/3cxbx/" title="硬件八股---串行并行、全双工半双工、同步异步讲解">硬件八股---串行并行、全双工半双工、同步异步讲解</a></p> <p>在这幅图中我们可以看到，SDA和SCL都接了上拉电阻，为什么呢？</p> <p>这也是选型的时候需要注意的问题，这个电阻需要选多大的呢？</p> <p>下面就围绕这个问题讲一下。</p> <h3><a name="t1"></a>I2C 总线的上拉电阻</h3> <h4><a name="t2"></a><strong>原因</strong></h4> <p>I2C 总线采用开漏（开集电极）结构的数据线（SDA）和时钟线（SCL）。开漏输出的特点是只能将信号拉低，不能主动拉高，这就需要外部的上拉电阻来确保信号线在没有被拉低时处于高电平状态，从而实现信号的正常传输。当总线空闲时，上拉电阻将 SDA 和 SCL 拉高，使得总线处于高电平等待状态。</p> <h4><a name="t3"></a><strong>选型</strong></h4> <ul><li><strong>阻值选择</strong> ：I2C 总线数据传输速率与上拉电阻阻值密切相关。一般选择在 1 - 10kΩ 范围内。若阻值过小，虽然能加快信号上升沿，但会增加电源功耗；阻值过大则会使上升时间变长，影响数据传输速度。常见的阻值有 1.5kΩ、2.2kΩ、4.7kΩ 等。</li><li><strong>功率选择</strong> ：根据总线上的设备数量和工作电流来确定上拉电阻的功率。一般情况下，0.125W - 0.25W 的普通电阻即可满足要求。</li></ul> <h3><a name="t4"></a>SPI 总线的电阻</h3><h4><a name="t5"></a><strong>原因</strong></h4> <p>在 SPI 通信中，虽然主设备和从设备之间通常采用推挽输出（可输出高、低电平），但为了防止信号<span class="words-blog hl-git-1" data-tit="反射" data-pretit="反射">反射</span>、匹配阻抗以及在多从设备连接时保证信号的稳定性和完整性，也会使用电阻。</p> <ul><li><strong>防止信号反射</strong> ：当信号在传输线上传播遇到阻抗不匹配的情况时，会产生反射信号，影响通信质量。在 SPI 总线的 MISO（从设备数据输出）和 MOSI（主设备数据输出）线上适当接入电阻，可以吸收反射信号，减少其对总线的干扰。</li><li><strong>匹配阻抗</strong> ：通过在 SPI 总线线上接入合适阻值的电阻，使传输线的特性阻抗与源端和负载端的阻抗相匹配，降低信号的反射系数，提高信号的传输效率和稳定性。</li><li><strong>多从设备连接</strong> ：在 SPI 总线连接多个从设备时，每个从设备的使能信号（CS）线上接入上拉或下拉电阻，确保在未被选中时，从设备不会干扰总线通信。</li></ul> <h4><a name="t6"></a><strong>选型</strong></h4> <ul><li><strong>上拉 / 下拉电阻</strong> ：对于 SPI 总线上的 CS 线，在选择上拉或下拉电阻时，阻值通常在 1kΩ - 10kΩ 范围内。如使用上拉电阻，阻值过小会导致 CS 线在未选中时功耗较大；阻值过大则可能使 CS 信号的电平转换速度变慢。一般可以选择 10kΩ 左右的上拉电阻。</li><li><strong>终端匹配电阻</strong> ：用于防止信号反射和匹配阻抗的终端匹配电阻，其阻值应与传输线的特性阻抗相匹配。常见的传输线特性阻抗在 50Ω - 100Ω 之间，因此终端匹配电阻可选择 75Ω、100Ω 等。</li></ul> <p>在实际应用中，需要综合考虑通信速率、传输距离、设备功耗、工作环境等因素来精确选择电阻的阻值和功率，以保证 I2C 和 SPI 总线通信的可靠性和稳定性。</p>                </div><div><div></div></div>        </div>]]></content>
       
       
       <categories>
@@ -155,6 +161,124 @@
           <category> 硬件八股知识划重点 </category>
           
           <category> 高频知识点 </category>
+          
+          <category> I2C/SPI上拉电阻的原因 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> I2C/SPI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---三种通信协议I2C、SPI、UART优缺点</title>
+      <link href="/2025/11/04/3ISUqubie/"/>
+      <url>/2025/11/04/3ISUqubie/</url>
+      
+        <content type="html"><![CDATA[<p>本文介绍嵌入式领域常用的SPI、I2C、UART三种串行通信协议。SPI为同步协议，通信速度快、支持全双工，但引脚占用多；I2C仅需两引脚，支持多主多从和仲裁机制，速率较慢；UART为异步协议，电路简单、通信距离长，依赖波特率匹配且速率低。三者均采用串行传输，适用于嵌入式设备通信，需根据传输速率、硬件资源、通信距离等需求选择。<br> <span id="more"></span></p><h2><a name="t3"></a>SPI、I2C、UART：串行通信协议的 “三剑客”</h2><p>在嵌入式系统和电子设备的通信领域，SPI、I2C 和 UART 是三种极为常见的串行通信协议，它们各自有着独特的特点和适用场景，犹如通信世界的 “三剑客”，在不同的战场上各显神通。</p><h3><a name="t4"></a>一、SPI</h3><h4><a name="t5"></a>工作原理</h4><p><img src="SPI.png"></p><p>SPI 是一种同步通信协议，采用主从模式，通常有四个引脚：MOSI（主设备数据输出，从设备数据输入）、MISO（主设备数据输入，从设备数据输出）、SCK（时钟信号，由主设备提供）和 SS（从设备选择信号，用于选择特定的从设备）。主设备通过 SCK 发出时钟信号，在时钟信号的驱动下，数据通过 MOSI 和 MISO 进行传输。</p><h4><a name="t6"></a>优点</h4><ul><li><p>通信速度极快，在硬件层面能达到较高的数据传输速率，适合大数据量的快速传输场景，如存储设备与处理器之间的数据交换。</p></li><li><p>可以同时支持全双工通信，主设备和从设备可以同时发送和接收数据，极大地提高了通信效率。</p></li></ul><h4><a name="t7"></a>缺点</h4><ul><li><p>需要较多的引脚，除了数据线和时钟线，每个从设备还需要一个独立的 SS 引脚，当从设备数量较多时，会占用大量的引脚资源，增加了硬件设计复杂度。</p></li><li><p>对总线的控制相对复杂，需要严格管理时钟信号和从设备选择信号，以确保数据传输的准确性。</p></li></ul><h3><a name="t8"></a>二、I2C</h3><h4><a name="t9"></a>工作原理</h4><p><img src="I2C.png"></p><p>I2C 也是一种同步通信协议，采用主从模式，仅使用两条引脚：SDA（数据线）和 SCL（时钟线）。主设备通过发送起始信号来启动通信，在 SCL 时钟信号的控制下，数据在 SDA 线上传输，每个从设备都有唯一的地址，主设备通过发送从设备地址来选择要通信的从设备。</p><h4><a name="t10"></a>优点</h4><ul><li><p>引脚数量少，只需要两条引脚，大大节省了硬件资源，便于在空间受限的设备中使用，如小型传感器与微控制器之间的通信。</p></li><li><p>支持多主多从通信，在一条 I2C 总线上可以连接多个主设备和多个从设备，具有很强的灵活性，能够构建复杂的通信网络。</p></li><li><p>具有完善的仲裁机制，可以有效地避免多个主设备同时发起通信时的数据冲突，提高了系统的可靠性。</p></li></ul><h4><a name="t11"></a>缺点</h4><ul><li><p>通信速度较 SPI 较慢，数据传输速率有限，在传输大数据量时效率较低，通常适用于低速率通信场景，如传感器数据采集和设备配置等。</p></li><li><p>由于是半双工通信，同一时刻数据只能在一个方向上传输，主设备和从设备不能同时发送和接收数据，通信效率相对较低。</p></li></ul><h3><a name="t12"></a>三、UART</h3><h4><a name="t13"></a>工作原理</h4><p><img src="UART.png"></p><p>UART 是一种异步通信协议，没有公共的时钟信号，通过在数据的开始和结束处添加起始位和停止位来标识数据的传输。它通常有两个引脚：TX（数据发送）和 RX（数据接收），发送方将数据按照一定的<span class="words-blog hl-git-1" data-tit="波特率" data-pretit="波特率">波特率</span>（数据传输速率）发送出去，接收方根据相同的波特率来接收数据。</p><h4><a name="t14"></a>优点</h4><ul><li><p>电路简单，无需时钟信号线，硬件设计相对简单，降低了硬件成本和复杂度，在一些简单的通信场景中易于实现，如调试信息的输出和简单的设备间通信。</p></li><li><p>通信距离相对较长，在适当的波特率下可以实现较远距离的数据传输，适用于一些对通信距离有一定要求的应用场景，如工业控制和远程通信等。</p></li></ul><h4><a name="t15"></a>缺点</h4><ul><li><p>由于是异步通信，没有统一的时钟信号，数据传输的准确性在一定程度上依赖于发送方和接收方的波特率匹配，如果波特率存在偏差，可能会导致数据错误。</p></li><li><p>数据传输速率相对较低，通常无法满足高速数据传输需求，一般适用于低速率、长距离的通信场景。</p></li></ul><h3><a name="t16"></a>四、共同点</h3><ol><li><p><strong>都是串行通信协议</strong> ：它们都采用串行传输方式，数据一位一位地在通信线路上进行传输，这使得它们在硬件资源占用上相对并行通信更少，适合在有限的空间和资源下进行数据通信，降低了硬件成本和复杂度。</p></li><li><p><strong>适用于嵌入式系统和电子设备</strong> ：在嵌入式系统和各种电子设备中都有广泛的应用，如微控制器与传感器、存储器、显示器等外围设备之间的通信，为设备之间的数据交互提供了灵活高效的解决方案。</p></li><li><p><strong>具有主从模式</strong> ：SPI 和 I2C 明确采用主从模式进行通信，UART 通常也可以在主从模式下工作，其中发送方可以看作是主设备，接收方是從设备，在一定程度上便于对通信过程进行管理和控制。</p></li></ol><h3><a name="t17"></a>五、总结</h3><p>SPI、I2C 和 UART 各自有着独特的优势和局限性，在实际应用中，我们需要根据具体的需求和场景来选择合适的通信协议。如果需要高速、大数据量的传输，SPI 可能是最佳选择；在对硬件资源要求高、多设备通信场景下，I2C 则更具优势；而对于简单的、长距离的低速率通信，UART 可以满足要求。了解它们的区别和共同点，有助于我们在嵌入式开发和电子设备设计中做出明智的选择，实现高效、可靠的数据通信。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> 三种通信协议I2C、SPI、UART优缺点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> I2C/SPI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件开发流程---1 方案调研</title>
+      <link href="/2025/11/04/2yjkf/"/>
+      <url>/2025/11/04/2yjkf/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 硬件开发流程 </category>
+          
+          <category> 1 方案调研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 硬件开发流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---串行并行、全双工半双工、同步异步讲解</title>
+      <link href="/2025/11/04/3cxbx/"/>
+      <url>/2025/11/04/3cxbx/</url>
+      
+        <content type="html"><![CDATA[<p>介绍通信的三类核心模式。串行按顺序逐位传输，线路简单、适合长距通信，代表协议有 SPI、I2C、UART；并行多位同时传输，速率高但线路多、适合短距。全双工可同时收发数据（如 SPI），效率高；半双工双向通信但不同时（如 I2C、UART），结构简单。同步依赖公共时钟（如 SPI、I2C），可靠性高但线路复杂；异步无需共同时钟（如 UART），灵活简便但效率和准确性稍逊。<br> <span id="more"></span></p><p><img src="20150221103537_VS2Me.gif"></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a><strong>串行和并行</strong></h2><ul><li><p><strong>串行</strong> ：是指数据一位接一位地依次传输。就像人们排队通过一个很窄的门一样，每次只能通过一个人。在串行通信中，数据是按照顺序在一个通道上逐位发送或接收的。例如，<span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span>（Serial Peripheral Interface）、I2C（Inter - Integrated Circuit）和 UART（Universal Asynchronous Receiver/Transmitter）都是串行通信协议。这种传输方式的优点是硬件线路简单，只需要较少的通信线，节省硬件资源，适合长距离通信。但是，因为数据是一位一位地传输，相对于并行通信，在相同的时间内传输的数据量会少一些，不过可以通过提高传输速率来弥补。</p></li><li><p><strong>并行</strong> ：是指数据的多个位同时传输。这就好比有好几扇门同时打开，人们可以同时通过。并行通信在同一时间可以传输多位数据，例如在计算机内部的某些数据总线，32 位的数据总线可以同时传输 32 位数据。其优势在于<span class="words-blog hl-git-1" data-tit="数据传输" data-pretit="数据传输">数据传输</span>速率高，能够快速地传输大量数据。然而，它需要较多的通信线路，硬件成本相对较高，并且随着传输距离的增加，信号之间的干扰也会更明显，所以一般适合短距离、高速率的数据传输场景。</p></li></ul><h2><a name="t1"></a><strong>全双工和半双工</strong></h2><ul><li><p><strong>全双工</strong> ：是指通信双方可以同时发送和接收数据。就像两个人在打电话，双方可以一边说话一边听对方说话。例如，SPI 支持全双工通信，在 SPI 总线中，主设备和从设备可以通过 MOSI（Master Out Slave In，主设备数据输出，从设备数据输入）和 MISO（Master In Slave Out，主设备数据输入，从设备数据输出）两条数据线同时进行数据传输。这种通信模式能够充分利用通信线路，提高通信效率。</p>    </li><li><p><strong>半双工</strong> ：是指通信双方可以进行双向通信，但不能同时发送和接收数据。就像两个人用一个对讲机，一个人在说话的时候，另一个人只能听，不能同时说话。I2C 和 <span class="words-blog hl-git-1" data-tit="UART" data-pretit="uart">UART</span> 一般工作在半双工模式。在 I2C 通信中，数据通过 SDA（Serial Data Line，数据线）进行传输，在同一时刻，数据只能在一个方向上传输；UART 通信中，虽然有 TX（Transmit，发送）和 RX（Receive，接收）两个引脚，但在实际通信过程中，一般同一时间只能进行发送或者接收操作。半双工模式相对简单，但在某些需要同时双向通信的场景下，通信效率会受到一定限制。</p></li></ul><h2><a name="t2"></a><strong>同步和异步</strong></h2><ul><li><p><strong>同步</strong> ：是指在通信过程中，发送方和接收方使用同一个时钟信号来协调数据的发送和接收。就好像一群人在跳集体舞，大家跟着同一个节拍器的节奏来跳舞。SPI 和 I2C 都是同步<span class="words-blog hl-git-1" data-tit="通信协议" data-pretit="通信协议">通信协议</span>。在 SPI 中，主设备提供 SCK（Serial Clock，时钟信号），在时钟信号的驱动下，数据通过 MOSI 和 MISO 进行传输；I2C 中，主设备也提供 SCL（Serial Clock，时钟线）信号来控制数据在 SDA 线上的传输节奏。同步通信的优点是数据传输的准确性和可靠性较高，因为有共同的时钟来约束数据传输，发送方和接收方对数据的处理是同步进行的。不过，同步通信需要额外的时钟信号线，增加了硬件线路的复杂性。</p></li><li><p><strong>异步</strong> ：是指发送方和接收方不需要使用同一个时钟信号来协调数据传输。就像两个人在聊天，没有固定的节拍，每个人按照自己的节奏说话和听别人说话，但通过一些规则（如起始位、停止位等）来保证双方能够理解对方的意思。UART 是一种异步通信协议，它通过在数据的开始和结束处添加起始位和停止位来标识一个数据字符的传输。异步通信的优点是比较灵活，不需要专门的时钟信号线，硬件线路简单。但它的缺点是数据传输的效率相对较低，而且对数据传输的准确性要求较高，因为没有公共时钟来约束，容易出现数据位移等问题。</p></li></ul></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> 串行并行、全双工半双工、同步异步讲解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 串行并行、全双工半双工、同步异步讲解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---LDO基础知识讲解</title>
+      <link href="/2025/11/04/3LDO/"/>
+      <url>/2025/11/04/3LDO/</url>
+      
+        <content type="html"><![CDATA[<p>详解两种 LDO 电路（带三极管、MOS 管）的设计与区别。先介绍三极管（电流特性、放大倍数、导通条件）、MOS 管（极的对应关系、特性曲线）及误差放大器（负反馈、线性区特性）的核心特性，再分析两种 LDO 的负反馈调节机制，说明输出电压和参考电压变化时，电路如何通过调整电流稳定输出。<br> <span id="more"></span></p><h2 id="一、问题提出"><a href="#一、问题提出" class="headerlink" title="一、问题提出"></a>一、问题提出</h2><p>经常，我们会在电路中遇到这两种LDO</p><p>带MOS管的</p><p><img src="%E5%B8%A6mos%E7%AE%A1%E7%9A%84LDO.png"></p><center>带mos管的LDO</center><p>带三极管的</p><p><img src="%E5%B8%A6%E4%B8%89%E6%9E%81%E7%AE%A1%E7%9A%84LDO.png"></p><center>带三极管的LDO</center><p>那么这两种具体有什么区别呢？</p><p><strong>当输出电压波动的时候，LDO内部的负反馈调节机制怎样去削弱这种波动，使得输出电压平稳？</strong></p><h2 id="二、各部分特性阐述"><a href="#二、各部分特性阐述" class="headerlink" title="二、各部分特性阐述"></a>二、各部分特性阐述</h2><h3 id="三极管特性"><a href="#三极管特性" class="headerlink" title="三极管特性"></a>三极管特性</h3><p>首先阐述一下三极管的特性。</p><p>参考了这篇文章：<a href="https://blog.csdn.net/Yin_w/article/details/132371836" title="NPN型三极管与PNP型三极管基本原理_npn型3极管-CSDN博客">NPN型三极管与PNP型三极管基本原理_npn型3极管-CSDN博客</a></p><p>三极管有两种，NPN型和PNP型，他们的特点也不一样</p><p><strong>电流特性le&#x3D;lb+lc</strong></p><p>1.根据电流的连续性，发射极电流(le)是由基极电流(Ib)和集电极电流(lc)组成的即:le&#x3D;lb+lc<br>2.这是三极管工作中的基本电流关系，表明基极电流和集电极电流是发射极电流的组成部分。</p><p><strong>放大倍数β</strong></p><p>1.由于基极电流非常小，而集电极电流则是由基极电流控制的，对于参杂浓度确定的晶体管，发射机扩散出来的自由电子与基极的空穴数量都是固定的个数，而且有一定的比例关系，我们可以定义为三极管的放大倍数(增益)，通常用β来表示，这个参数称为电流增益，它表示基极电流(Ib)与集电极电流(lc)之间的比例关系:Ic&#x3D;βxIb<br>2.因此，集电极电流是基极电流的放大倍数，这个倍数是三极管的一个关键特性，通常在几十到几百之间</p><p><strong>导通条件</strong></p><p>1.针对NPN的三极管，需要对基极添加<strong>高电平</strong>，并在B与E电压差大于0.7v时，此时Vc &gt; Vb &gt; Ve，三极管导通，电流从c极流向e极，基极负载电流是流向三极管的基极。</p><p>2.针对PNP的三极管，需要对基极添加<strong>低电平</strong>，并在B与E电压差大于0.7v时，此时Vc &lt; Vb&lt; Ve，三极管导通，电流从e极流向c极，基极负载电流是流出三极管的基极。</p><p>可以看下面这个</p><p><img src="%E4%B8%89%E6%9E%81%E7%AE%A1%E8%AE%B2%E8%A7%A3.png"></p><center>三极管讲解</center><p><strong>集电极电流变化</strong></p><p>虽然集电极电流是由外部电源（Vce）提供的，但其大小受基极电流（Ib）的控制，形成电流放大效应，基极电流越大，集电极电流也越大。可以参考三极管的输出特性曲线</p><p><img src="%E4%B8%89%E6%9E%81%E7%AE%A1%E8%BE%93%E5%87%BA%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png"></p><center>三极管输出特性曲线</center><p>三极管工作在放大区的时候，基极电流越大，集电极电流就越大。</p><h3 id="MOS管特性"><a href="#MOS管特性" class="headerlink" title="MOS管特性"></a>MOS管特性</h3><p>看了前面的三极管，对mos管应该有更直观的认识。</p><p>MOS管也有两种，PMOS管和NMOS管，还有耗尽型和增强型，PMOS和NMOS的特性和三极管可以对照着记忆。主要把三个极替换成了d，g，s来表示，栅极g&#x3D;基极b；漏极d&#x3D;集电极c；源极s&#x3D;发射极e</p><p><img src="N%E6%B2%9F%E9%81%93.png"></p><p><img src="P%E6%B2%9F%E9%81%93.png"></p><center>场效应管讲解</center><p>先复习一下N沟道的输出特性曲线和转移特性曲线。这图一看比较复杂，但是如果把它和三极管的混合着看，能够发现一些规律。</p><p><img src="N%E6%B2%9F%E9%81%93%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png"></p><p>观察可变电阻区，也就是Ⅰ区，当栅源电压不变的时候，漏极电流Id随着漏源电压Uds的增加近似按直线上升。在整个曲线上，Ugs的绝对值增大的时候，漏极电流Id在减小。注意这里说的是N沟道，也就是NMOS管。P沟道的变化规律相反。</p><p><img src="%E7%BB%93%E5%9E%8Bmos%E7%AE%A1%E7%89%B9%E6%80%A7.png"></p><center>结型mos管特性</center><h3 id="运放特性"><a href="#运放特性" class="headerlink" title="运放特性"></a>运放特性</h3><p>这里主要讲一下误差放大器，先记住，误差放大器是带负反馈的，那么它其实工作在线性区，此时虚短和虚断都是存在的。因此可以根据这个去进行芯片选型。</p><p><img src="%E8%AF%AF%E5%B7%AE%E6%94%BE%E5%A4%A7%E5%99%A8%E8%A7%A3%E9%87%8A.png"></p><center>误差放大器解释</center><p>运放中还有差动放大器等，这些我后面再出教程解释。</p><h2 id="三、回答问题"><a href="#三、回答问题" class="headerlink" title="三、回答问题"></a>三、回答问题</h2><p>根据前面所讲的这几个特性，结合起来再回过去看前面提出的两种电路。</p><h3 id="NPN管LDO"><a href="#NPN管LDO" class="headerlink" title="NPN管LDO"></a>NPN管LDO</h3><p>带三极管的LDO中，首先注意到，<strong>参考电压Uref在同相输入端输入，并且用的三极管是NPN管</strong></p><p><img src="%E5%B8%A6%E4%B8%89%E6%9E%81%E7%AE%A1%E7%9A%84LDO.png"></p><center>带三极管的LDO</center><p><strong>输出电压变化的情况：</strong></p><p>1. 当输出电压UO变大的时候，会导致输出电压UQ变大，也就是UQ&gt;Uref的时候，误差放大器会倾向于使输入的电压相等，运放的输出电压是U+减去U-，因此输出电压会变小，因此电流Ir会变小。</p><p>2. 从三极管VT看，此时基极电流变小，那么集电极电流和发射极电流都会变小，因此UO也会变小，因此这种电路能够有效抵抗UO变大的情况。</p><p><strong>参考电压变化的情况：</strong></p><p>1.当参考电压Uref变大的时候，因为是同相输入端变大，因此输出电流也会变大</p><p>2.从三极管上看，基极输入电流变大，发射极电流也会变大，因此UQ也会变大，传到运放的反相输入端，<strong>抵消了误差放大器输出变大的趋势</strong></p><h3 id="PMOS管LDO"><a href="#PMOS管LDO" class="headerlink" title="PMOS管LDO"></a>PMOS管LDO</h3><p>带MOS管的LDO中，特别注意到，<strong>参考电压是从反相输入端输入，用的MOS管是PMOS管</strong></p><p><img src="%E5%B8%A6mos%E7%AE%A1%E7%9A%84LDO.png"></p><center>带mos管的LDO</center><p><strong>输出电压变化的情况：</strong></p><p>1.当输出电压VOUT变大的时候，会导致VFB变大，同样误差放大器会倾向于使输入的电压相等，运放的输出电压是U+减去U-，因此输出电压会变大。</p><p>2.从运放这里看，也就是误差放大器这里看，VIN不变，UG变大，那么UGS会变大，根据PMOS管的性质，UGS变大，Id会变小，也就是漏极电流会变小，导致VOUT也会变小，因此地抵消了VOUT变大的情况。</p><p><strong>参考电压变化的情况：</strong></p><p>1.当参考电压Uref变大的时候，因为是反相输入端变大，因此输出电压会变小</p><p>2.从PMOS管上看，Ug变小，VIN不变，Ugs变小，则漏极电流会变大，使得VFB变大，传到运放的同相输入端，<strong>抵消了误差放大器输出变小的趋势。</strong></p><p>完结撒花！都看到这里了！不点个关注吗？主页还有更详细的教程哦！🥺🥺🥺</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> LDO基础知识讲解 </category>
           
       </categories>
       
@@ -170,25 +294,25 @@
     
     
     <entry>
-      <title>硬件八股---Ⅰ常见手撕电路：电流镜</title>
-      <link href="/2025/11/04/3shousi/"/>
-      <url>/2025/11/04/3shousi/</url>
+      <title>硬件进阶---Ⅰ可靠性设计</title>
+      <link href="/2025/11/04/4kekaox/"/>
+      <url>/2025/11/04/4kekaox/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       <categories>
           
-          <category> 硬件八股知识划重点 </category>
+          <category> 硬件进阶 </category>
           
-          <category> 常见手撕电路讲解 </category>
+          <category> 可靠性设计 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 电流镜 </tag>
+            <tag> 可靠性设计 </tag>
             
         </tags>
       
@@ -224,25 +348,25 @@
     
     
     <entry>
-      <title>硬件进阶---Ⅰ可靠性设计</title>
-      <link href="/2025/11/04/4kekaox/"/>
-      <url>/2025/11/04/4kekaox/</url>
+      <title>硬件八股---Ⅰ常见手撕电路：电流镜</title>
+      <link href="/2025/11/04/3shousi/"/>
+      <url>/2025/11/04/3shousi/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       <categories>
           
-          <category> 硬件进阶 </category>
+          <category> 硬件八股知识划重点 </category>
           
-          <category> 可靠性设计 </category>
+          <category> 常见手撕电路讲解 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 可靠性设计 </tag>
+            <tag> 电流镜 </tag>
             
         </tags>
       
