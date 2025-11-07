@@ -4,20 +4,18 @@
   
     
     <entry>
-      <title>寒武纪面试经验分享</title>
-      <link href="/2025/11/04/1hwj/"/>
-      <url>/2025/11/04/1hwj/</url>
+      <title>重庆长安汽车面试经验分享</title>
+      <link href="/2025/11/04/1caqc/"/>
+      <url>/2025/11/04/1caqc/</url>
       
-        <content type="html"><![CDATA[<p>寒武纪面试经验分享：公积金8%，按税前基数缴纳，5天带薪病假，年假按国家规定执行，加班有加班费，周末两倍，节假日三倍工资，一周4次俱乐部活动（瑜伽、健身等），实习期间薪资不打折，第一周在北京团建，有人带领熟悉，转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败，提供大师课培训</p><span id="more"></span><p><img src="offer.jpg"></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       <categories>
           
           <category> 秋招面试经验分享 </category>
           
-          <category> 大厂面试经验 </category>
-          
-          <category> 寒武纪 </category>
+          <category> 央国企面试经验 </category>
           
       </categories>
       
@@ -35,18 +33,20 @@
     
     
     <entry>
-      <title>重庆长安汽车面试经验分享</title>
-      <link href="/2025/11/04/1caqc/"/>
-      <url>/2025/11/04/1caqc/</url>
+      <title>寒武纪面试经验分享</title>
+      <link href="/2025/11/04/1hwj/"/>
+      <url>/2025/11/04/1hwj/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>寒武纪面试经验分享：公积金8%，按税前基数缴纳，5天带薪病假，年假按国家规定执行，加班有加班费，周末两倍，节假日三倍工资，一周4次俱乐部活动（瑜伽、健身等），实习期间薪资不打折，第一周在北京团建，有人带领熟悉，转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败，提供大师课培训</p><span id="more"></span><p><img src="offer.jpg"></p><center>寒武纪2025届校园招聘录用通知书</center><h2 id="0827-一面（翻车）"><a href="#0827-一面（翻车）" class="headerlink" title="0827 一面（翻车）"></a>0827 一面（翻车）</h2><ol><li>自我介绍</li><li>讲一下你对I2C的理解，ACK怎么判断是接收到信号了？</li><li>电磁兼容性设计怎么设计的？</li><li>电平转换电路怎么做的？</li><li>DCDC讲一下buck电路的原理，电感怎么选型的？电感关注哪些参数？电感的电流、电阻怎么选的？</li><li>UART多路复用怎么做的？</li><li>有没有遇到什么问题？都是怎么解决的？</li><li>你的意向工作地是哪里？</li><li>反问：部门是做什么的？有多少人？</li></ol><h2 id="0831-二面（无太多技术问题，以闲聊为主）"><a href="#0831-二面（无太多技术问题，以闲聊为主）" class="headerlink" title="0831 二面（无太多技术问题，以闲聊为主）"></a>0831 二面（无太多技术问题，以闲聊为主）</h2><ol><li>自我介绍</li><li>工程中的可靠性讲一下，为之付出了哪些努力？</li><li>爱好</li><li>项目介绍</li><li>公司介绍</li><li>Base地发展的意愿</li><li>反问：新人进去的培训流程</li></ol><h2 id="0906-三面"><a href="#0906-三面" class="headerlink" title="0906 三面"></a>0906 三面</h2><ol><li>自我介绍</li><li>手里有哪些offer</li><li>有啥爱好，特别是球类运动</li><li>对行业内顶尖公司的了解</li><li>对加班的看法</li><li>有什么原因可能会导致你离职？</li><li>未来职业规划</li><li>反问环节（公司福利待遇介绍）：<ul><li>公积金8%，按税前基数缴纳</li><li>5天带薪病假，年假按国家规定执行</li><li>加班有加班费，周末两倍，节假日三倍工资</li><li>一周4次俱乐部活动（瑜伽、健身等）</li><li>实习期间薪资不打折</li><li>第一周在北京团建，有人带领熟悉</li><li>转正通过虚拟项目考核，去年仅1人因违反公司制度转正失败</li><li>提供大师课培训</li></ul></li></ol>]]></content>
       
       
       <categories>
           
           <category> 秋招面试经验分享 </category>
           
-          <category> 央国企面试经验 </category>
+          <category> 大厂面试经验 </category>
+          
+          <category> 寒武纪 </category>
           
       </categories>
       
@@ -93,6 +93,122 @@
     
     
     <entry>
+      <title>函数发生器的使用教程</title>
+      <link href="/2025/11/04/2hanshufashengqi/"/>
+      <url>/2025/11/04/2hanshufashengqi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 常用仪器仪表使用 </category>
+          
+          <category> 函数发生器的使用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常用仪器仪表使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>示波器的使用教程</title>
+      <link href="/2025/11/04/2shiboqi/"/>
+      <url>/2025/11/04/2shiboqi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 常用仪器仪表使用 </category>
+          
+          <category> 示波器的使用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常用仪器仪表使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>万用表的使用教程</title>
+      <link href="/2025/11/04/2wanyongbiao/"/>
+      <url>/2025/11/04/2wanyongbiao/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 常用仪器仪表使用 </category>
+          
+          <category> 万用表的使用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常用仪器仪表使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件开发流程---5 硬件测试流程</title>
+      <link href="/2025/11/04/2yjcsliucheng/"/>
+      <url>/2025/11/04/2yjcsliucheng/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 硬件开发流程 </category>
+          
+          <category> 5 硬件测试流程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 硬件开发流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>硬件开发流程---1 方案调研</title>
       <link href="/2025/11/04/2yjkf/"/>
       <url>/2025/11/04/2yjkf/</url>
@@ -122,27 +238,85 @@
     
     
     <entry>
-      <title>万用表的使用教程</title>
-      <link href="/2025/11/04/2cyyq/"/>
-      <url>/2025/11/04/2cyyq/</url>
+      <title>硬件开发流程---3 原理图设计</title>
+      <link href="/2025/11/04/2yltsheji/"/>
+      <url>/2025/11/04/2yltsheji/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
           <category> 硬件类基础知识分享 </category>
           
-          <category> 常用仪器仪表使用 </category>
+          <category> 硬件开发流程 </category>
           
-          <category> 万用表的使用教程 </category>
+          <category> 3 原理图设计 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 常用仪器仪表使用 </tag>
+            <tag> 硬件开发流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件开发流程---2 硬件选型</title>
+      <link href="/2025/11/04/2yjxx/"/>
+      <url>/2025/11/04/2yjxx/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件类基础知识分享 </category>
+          
+          <category> 硬件开发流程 </category>
+          
+          <category> 2 硬件选型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 硬件开发流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---I2C/SPI总线接电阻的原因</title>
+      <link href="/2025/11/04/3I2CSPI_R/"/>
+      <url>/2025/11/04/3I2CSPI_R/</url>
+      
+        <content type="html"><![CDATA[<p>该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。<br> <span id="more"></span></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a>I2C 与 <span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span> 线路中电阻的作用及选型</h2> <p>在数字通信领域，I2C 和 SPI 总线被广泛应用，而它们的线路设计中都有电阻的使用，这些电阻虽然小，却发挥着至关重要的作用，在画<span class="words-blog hl-git-1" data-tit="原理图" data-pretit="原理图">原理图</span>的时候，我们经常遇到这种</p><p><img src="I2C.png"></p><center>I2C模块说明书</center><p>这是一个气体<span class="words-blog hl-git-1" data-tit="传感器" data-pretit="传感器">传感器</span>C2874215的说明书，它使用的是I2C协议，在前面讲过怎么分辨这几种协议：</p> <p><a href="http://labidaisy888.tech/2025/11/04/3cxbx/" title="硬件八股---串行并行、全双工半双工、同步异步讲解">硬件八股---串行并行、全双工半双工、同步异步讲解</a></p> <p>在这幅图中我们可以看到，SDA和SCL都接了上拉电阻，为什么呢？</p> <p>这也是选型的时候需要注意的问题，这个电阻需要选多大的呢？</p> <p>下面就围绕这个问题讲一下。</p> <h3><a name="t1"></a>I2C 总线的上拉电阻</h3> <h4><a name="t2"></a><strong>原因</strong></h4> <p>I2C 总线采用开漏（开集电极）结构的数据线（SDA）和时钟线（SCL）。开漏输出的特点是只能将信号拉低，不能主动拉高，这就需要外部的上拉电阻来确保信号线在没有被拉低时处于高电平状态，从而实现信号的正常传输。当总线空闲时，上拉电阻将 SDA 和 SCL 拉高，使得总线处于高电平等待状态。</p> <h4><a name="t3"></a><strong>选型</strong></h4> <ul><li><strong>阻值选择</strong> ：I2C 总线数据传输速率与上拉电阻阻值密切相关。一般选择在 1 - 10kΩ 范围内。若阻值过小，虽然能加快信号上升沿，但会增加电源功耗；阻值过大则会使上升时间变长，影响数据传输速度。常见的阻值有 1.5kΩ、2.2kΩ、4.7kΩ 等。</li><li><strong>功率选择</strong> ：根据总线上的设备数量和工作电流来确定上拉电阻的功率。一般情况下，0.125W - 0.25W 的普通电阻即可满足要求。</li></ul> <h3><a name="t4"></a>SPI 总线的电阻</h3><h4><a name="t5"></a><strong>原因</strong></h4> <p>在 SPI 通信中，虽然主设备和从设备之间通常采用推挽输出（可输出高、低电平），但为了防止信号<span class="words-blog hl-git-1" data-tit="反射" data-pretit="反射">反射</span>、匹配阻抗以及在多从设备连接时保证信号的稳定性和完整性，也会使用电阻。</p> <ul><li><strong>防止信号反射</strong> ：当信号在传输线上传播遇到阻抗不匹配的情况时，会产生反射信号，影响通信质量。在 SPI 总线的 MISO（从设备数据输出）和 MOSI（主设备数据输出）线上适当接入电阻，可以吸收反射信号，减少其对总线的干扰。</li><li><strong>匹配阻抗</strong> ：通过在 SPI 总线线上接入合适阻值的电阻，使传输线的特性阻抗与源端和负载端的阻抗相匹配，降低信号的反射系数，提高信号的传输效率和稳定性。</li><li><strong>多从设备连接</strong> ：在 SPI 总线连接多个从设备时，每个从设备的使能信号（CS）线上接入上拉或下拉电阻，确保在未被选中时，从设备不会干扰总线通信。</li></ul> <h4><a name="t6"></a><strong>选型</strong></h4> <ul><li><strong>上拉 / 下拉电阻</strong> ：对于 SPI 总线上的 CS 线，在选择上拉或下拉电阻时，阻值通常在 1kΩ - 10kΩ 范围内。如使用上拉电阻，阻值过小会导致 CS 线在未选中时功耗较大；阻值过大则可能使 CS 信号的电平转换速度变慢。一般可以选择 10kΩ 左右的上拉电阻。</li><li><strong>终端匹配电阻</strong> ：用于防止信号反射和匹配阻抗的终端匹配电阻，其阻值应与传输线的特性阻抗相匹配。常见的传输线特性阻抗在 50Ω - 100Ω 之间，因此终端匹配电阻可选择 75Ω、100Ω 等。</li></ul> <p>在实际应用中，需要综合考虑通信速率、传输距离、设备功耗、工作环境等因素来精确选择电阻的阻值和功率，以保证 I2C 和 SPI 总线通信的可靠性和稳定性。</p>                </div><div><div></div></div>        </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> I2C/SPI总线接电阻的原因 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> I2C/SPI </tag>
             
         </tags>
       
@@ -172,35 +346,6 @@
         <tags>
             
             <tag> DCDC </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>硬件八股---I2C/SPI上拉电阻的原因</title>
-      <link href="/2025/11/04/3I2CSPI_R/"/>
-      <url>/2025/11/04/3I2CSPI_R/</url>
-      
-        <content type="html"><![CDATA[<p>该文章解析I2C和SPI总线中电阻的作用与选型。I2C总线因SDA、SCL为开漏输出，需上拉电阻确保空闲时为高电平，阻值选1-10kΩ（常见4.7kΩ等）、功率0.125-0.25W。SPI总线的电阻用于防信号反射、匹配阻抗及稳定多从设备通信，CS线上拉&#x2F;下拉电阻选1-10kΩ，终端匹配电阻按传输线阻抗选50-100Ω左右，选型需结合通信速率等因素。<br> <span id="more"></span></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a>I2C 与 <span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span> 线路中电阻的作用及选型</h2> <p>在数字通信领域，I2C 和 SPI 总线被广泛应用，而它们的线路设计中都有电阻的使用，这些电阻虽然小，却发挥着至关重要的作用，在画<span class="words-blog hl-git-1" data-tit="原理图" data-pretit="原理图">原理图</span>的时候，我们经常遇到这种</p><p><img src="I2C.png"></p><center>I2C模块说明书</center><p>这是一个气体<span class="words-blog hl-git-1" data-tit="传感器" data-pretit="传感器">传感器</span>C2874215的说明书，它使用的是I2C协议，在前面讲过怎么分辨这几种协议：</p> <p><a href="http://labidaisy888.tech/2025/11/04/3cxbx/" title="硬件八股---串行并行、全双工半双工、同步异步讲解">硬件八股---串行并行、全双工半双工、同步异步讲解</a></p> <p>在这幅图中我们可以看到，SDA和SCL都接了上拉电阻，为什么呢？</p> <p>这也是选型的时候需要注意的问题，这个电阻需要选多大的呢？</p> <p>下面就围绕这个问题讲一下。</p> <h3><a name="t1"></a>I2C 总线的上拉电阻</h3> <h4><a name="t2"></a><strong>原因</strong></h4> <p>I2C 总线采用开漏（开集电极）结构的数据线（SDA）和时钟线（SCL）。开漏输出的特点是只能将信号拉低，不能主动拉高，这就需要外部的上拉电阻来确保信号线在没有被拉低时处于高电平状态，从而实现信号的正常传输。当总线空闲时，上拉电阻将 SDA 和 SCL 拉高，使得总线处于高电平等待状态。</p> <h4><a name="t3"></a><strong>选型</strong></h4> <ul><li><strong>阻值选择</strong> ：I2C 总线数据传输速率与上拉电阻阻值密切相关。一般选择在 1 - 10kΩ 范围内。若阻值过小，虽然能加快信号上升沿，但会增加电源功耗；阻值过大则会使上升时间变长，影响数据传输速度。常见的阻值有 1.5kΩ、2.2kΩ、4.7kΩ 等。</li><li><strong>功率选择</strong> ：根据总线上的设备数量和工作电流来确定上拉电阻的功率。一般情况下，0.125W - 0.25W 的普通电阻即可满足要求。</li></ul> <h3><a name="t4"></a>SPI 总线的电阻</h3><h4><a name="t5"></a><strong>原因</strong></h4> <p>在 SPI 通信中，虽然主设备和从设备之间通常采用推挽输出（可输出高、低电平），但为了防止信号<span class="words-blog hl-git-1" data-tit="反射" data-pretit="反射">反射</span>、匹配阻抗以及在多从设备连接时保证信号的稳定性和完整性，也会使用电阻。</p> <ul><li><strong>防止信号反射</strong> ：当信号在传输线上传播遇到阻抗不匹配的情况时，会产生反射信号，影响通信质量。在 SPI 总线的 MISO（从设备数据输出）和 MOSI（主设备数据输出）线上适当接入电阻，可以吸收反射信号，减少其对总线的干扰。</li><li><strong>匹配阻抗</strong> ：通过在 SPI 总线线上接入合适阻值的电阻，使传输线的特性阻抗与源端和负载端的阻抗相匹配，降低信号的反射系数，提高信号的传输效率和稳定性。</li><li><strong>多从设备连接</strong> ：在 SPI 总线连接多个从设备时，每个从设备的使能信号（CS）线上接入上拉或下拉电阻，确保在未被选中时，从设备不会干扰总线通信。</li></ul> <h4><a name="t6"></a><strong>选型</strong></h4> <ul><li><strong>上拉 / 下拉电阻</strong> ：对于 SPI 总线上的 CS 线，在选择上拉或下拉电阻时，阻值通常在 1kΩ - 10kΩ 范围内。如使用上拉电阻，阻值过小会导致 CS 线在未选中时功耗较大；阻值过大则可能使 CS 信号的电平转换速度变慢。一般可以选择 10kΩ 左右的上拉电阻。</li><li><strong>终端匹配电阻</strong> ：用于防止信号反射和匹配阻抗的终端匹配电阻，其阻值应与传输线的特性阻抗相匹配。常见的传输线特性阻抗在 50Ω - 100Ω 之间，因此终端匹配电阻可选择 75Ω、100Ω 等。</li></ul> <p>在实际应用中，需要综合考虑通信速率、传输距离、设备功耗、工作环境等因素来精确选择电阻的阻值和功率，以保证 I2C 和 SPI 总线通信的可靠性和稳定性。</p>                </div><div><div></div></div>        </div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 硬件八股知识划重点 </category>
-          
-          <category> 高频知识点 </category>
-          
-          <category> I2C/SPI上拉电阻的原因 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> I2C/SPI </tag>
             
         </tags>
       
@@ -267,6 +412,64 @@
     
     
     <entry>
+      <title>硬件八股---串行并行、全双工半双工、同步异步讲解</title>
+      <link href="/2025/11/04/3cxbx/"/>
+      <url>/2025/11/04/3cxbx/</url>
+      
+        <content type="html"><![CDATA[<p>介绍通信的三类核心模式。串行按顺序逐位传输，线路简单、适合长距通信，代表协议有 SPI、I2C、UART；并行多位同时传输，速率高但线路多、适合短距。全双工可同时收发数据（如 SPI），效率高；半双工双向通信但不同时（如 I2C、UART），结构简单。同步依赖公共时钟（如 SPI、I2C），可靠性高但线路复杂；异步无需共同时钟（如 UART），灵活简便但效率和准确性稍逊。<br> <span id="more"></span></p><p><img src="20150221103537_VS2Me.gif"></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a><strong>串行和并行</strong></h2><ul><li><p><strong>串行</strong> ：是指数据一位接一位地依次传输。就像人们排队通过一个很窄的门一样，每次只能通过一个人。在串行通信中，数据是按照顺序在一个通道上逐位发送或接收的。例如，<span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span>（Serial Peripheral Interface）、I2C（Inter - Integrated Circuit）和 UART（Universal Asynchronous Receiver/Transmitter）都是串行通信协议。这种传输方式的优点是硬件线路简单，只需要较少的通信线，节省硬件资源，适合长距离通信。但是，因为数据是一位一位地传输，相对于并行通信，在相同的时间内传输的数据量会少一些，不过可以通过提高传输速率来弥补。</p></li><li><p><strong>并行</strong> ：是指数据的多个位同时传输。这就好比有好几扇门同时打开，人们可以同时通过。并行通信在同一时间可以传输多位数据，例如在计算机内部的某些数据总线，32 位的数据总线可以同时传输 32 位数据。其优势在于<span class="words-blog hl-git-1" data-tit="数据传输" data-pretit="数据传输">数据传输</span>速率高，能够快速地传输大量数据。然而，它需要较多的通信线路，硬件成本相对较高，并且随着传输距离的增加，信号之间的干扰也会更明显，所以一般适合短距离、高速率的数据传输场景。</p></li></ul><h2><a name="t1"></a><strong>全双工和半双工</strong></h2><ul><li><p><strong>全双工</strong> ：是指通信双方可以同时发送和接收数据。就像两个人在打电话，双方可以一边说话一边听对方说话。例如，SPI 支持全双工通信，在 SPI 总线中，主设备和从设备可以通过 MOSI（Master Out Slave In，主设备数据输出，从设备数据输入）和 MISO（Master In Slave Out，主设备数据输入，从设备数据输出）两条数据线同时进行数据传输。这种通信模式能够充分利用通信线路，提高通信效率。</p>    </li><li><p><strong>半双工</strong> ：是指通信双方可以进行双向通信，但不能同时发送和接收数据。就像两个人用一个对讲机，一个人在说话的时候，另一个人只能听，不能同时说话。I2C 和 <span class="words-blog hl-git-1" data-tit="UART" data-pretit="uart">UART</span> 一般工作在半双工模式。在 I2C 通信中，数据通过 SDA（Serial Data Line，数据线）进行传输，在同一时刻，数据只能在一个方向上传输；UART 通信中，虽然有 TX（Transmit，发送）和 RX（Receive，接收）两个引脚，但在实际通信过程中，一般同一时间只能进行发送或者接收操作。半双工模式相对简单，但在某些需要同时双向通信的场景下，通信效率会受到一定限制。</p></li></ul><h2><a name="t2"></a><strong>同步和异步</strong></h2><ul><li><p><strong>同步</strong> ：是指在通信过程中，发送方和接收方使用同一个时钟信号来协调数据的发送和接收。就好像一群人在跳集体舞，大家跟着同一个节拍器的节奏来跳舞。SPI 和 I2C 都是同步<span class="words-blog hl-git-1" data-tit="通信协议" data-pretit="通信协议">通信协议</span>。在 SPI 中，主设备提供 SCK（Serial Clock，时钟信号），在时钟信号的驱动下，数据通过 MOSI 和 MISO 进行传输；I2C 中，主设备也提供 SCL（Serial Clock，时钟线）信号来控制数据在 SDA 线上的传输节奏。同步通信的优点是数据传输的准确性和可靠性较高，因为有共同的时钟来约束数据传输，发送方和接收方对数据的处理是同步进行的。不过，同步通信需要额外的时钟信号线，增加了硬件线路的复杂性。</p></li><li><p><strong>异步</strong> ：是指发送方和接收方不需要使用同一个时钟信号来协调数据传输。就像两个人在聊天，没有固定的节拍，每个人按照自己的节奏说话和听别人说话，但通过一些规则（如起始位、停止位等）来保证双方能够理解对方的意思。UART 是一种异步通信协议，它通过在数据的开始和结束处添加起始位和停止位来标识一个数据字符的传输。异步通信的优点是比较灵活，不需要专门的时钟信号线，硬件线路简单。但它的缺点是数据传输的效率相对较低，而且对数据传输的准确性要求较高，因为没有公共时钟来约束，容易出现数据位移等问题。</p></li></ul></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> 串行并行、全双工半双工、同步异步讲解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 串行并行、全双工半双工、同步异步讲解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件八股---集成运放/运算放大器相关知识</title>
+      <link href="/2025/11/04/3fangdaqi/"/>
+      <url>/2025/11/04/3fangdaqi/</url>
+      
+        <content type="html"><![CDATA[<p>聚焦集成运放核心应用电路，先明确其线性区（带深度负反馈，遵循虚短、虚断原则）与非线性区（开环或正反馈，输出仅正负饱和值）的区分及分析方法。接着详解差动放大器原理，通过叠加原理推导输出电压公式，说明其消除共模电压和误差的特性。最后介绍仪表放大电路的两级结构，分析其高输入阻抗、高共模抑制比的优势及适用场景，为微弱信号测量提供解决方案。<br> <span id="more"></span></p><h2><a name="t0"></a>一、如何辨别集成运放工作在<span class="words-blog hl-git-1" data-tit="线性" data-pretit="线性">线性</span>区还是非线性区？</h2> <p>根据模电书上写的，有两种运用。一种是线性，一种是非线性。</p> <p><img src="%E7%BA%BF%E6%80%A7%E9%9D%9E%E7%BA%BF%E6%80%A7.png"></p><h3><a name="t1"></a>1.线性运用</h3> <p>当集成运放带<strong>深度负反馈</strong>，或者是<strong>兼有正负反馈而以负反馈为主时</strong>，集成运放工作在线性状态。此时，集成运放输出量与净输人量成线性关系。<span style="color:#be191c">但是，整个应用电路的输出与输人之间仍可能是非线性的关系。</span></p> <h3><a name="t2"></a>2.非线性应用</h3> <p>在这种情况下，集成运放<strong>处于无反馈(开环)或带正反馈</strong>的工作状态。此时，集成运放的输出量与净输入量成非线性关系，<span style="color:#be191c">输出量不是处于正饱和值就是负饱和值</span>。</p> <h2><a name="t3"></a>二、两个区域的分析方法</h2> <p>很显然，这两种区域需要不同的分析方法。</p> <p>如果是线性应用，就按照虚短和虚断的原则。</p> <p>非线性运用中，只有虚断满足，并且：</p> <p><img src="%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%94%A8.png"></p><center>非线性运用</center><h2><a name="t4"></a>三、差动放大器的原理</h2> <p>差动放大器如下</p> <p><img src="%E5%B7%AE%E5%8A%A8%E6%94%BE%E5%A4%A7%E5%99%A8.png"></p><center>差动放大器电路</center><p>使用叠加原理，可以计算出输出电压。注意计算的时候，电流方向是带正负的。</p> <p>运算长这样：</p> <p><img src="%E5%B7%AE%E5%8A%A8%E8%BE%93%E5%85%A5%E5%85%AC%E5%BC%8F.png"></p><center>差动放大电路计算过程</center><p>为什么叫差动放大器？因为输出电压只与输入的差模部分有关，输入的共模电压和运放偏置电流引起的误差同时被消除。</p> <h2><a name="t5"></a>四、仪表放大电路</h2> <p>教材上的示意图长这样：</p> <p><img src="%E4%BB%AA%E8%A1%A8%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF.png"></p><center>仪表放大电路</center><p>这个是有两级放大电路，由A1、A2组成第一级差动电路，A3组成第二级差动电路</p> <p>计算如下：</p> <p><img src="%E4%BB%AA%E8%A1%A8%E8%AE%A1%E7%AE%97.png"></p><center>仪表放大电路计算过程</center><p>完结撒花！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件八股知识划重点 </category>
+          
+          <category> 高频知识点 </category>
+          
+          <category> 集成运放/运算放大器相关知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 集成运放/运算放大器相关知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>硬件八股---Ⅰ常见手撕电路：电流镜</title>
       <link href="/2025/11/04/3shousi/"/>
       <url>/2025/11/04/3shousi/</url>
@@ -294,27 +497,52 @@
     
     
     <entry>
-      <title>硬件八股---串行并行、全双工半双工、同步异步讲解</title>
-      <link href="/2025/11/04/3cxbx/"/>
-      <url>/2025/11/04/3cxbx/</url>
+      <title>硬件进阶---器件归一化一致性设计</title>
+      <link href="/2025/11/04/4guiyihua/"/>
+      <url>/2025/11/04/4guiyihua/</url>
       
-        <content type="html"><![CDATA[<p>介绍通信的三类核心模式。串行按顺序逐位传输，线路简单、适合长距通信，代表协议有 SPI、I2C、UART；并行多位同时传输，速率高但线路多、适合短距。全双工可同时收发数据（如 SPI），效率高；半双工双向通信但不同时（如 I2C、UART），结构简单。同步依赖公共时钟（如 SPI、I2C），可靠性高但线路复杂；异步无需共同时钟（如 UART），灵活简便但效率和准确性稍逊。<br> <span id="more"></span></p><p><img src="20150221103537_VS2Me.gif"></p><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-10bf609291.css">                <div id="content_views" class="htmledit_views atom-one-dark">                    <h2><a name="t0"></a><strong>串行和并行</strong></h2><ul><li><p><strong>串行</strong> ：是指数据一位接一位地依次传输。就像人们排队通过一个很窄的门一样，每次只能通过一个人。在串行通信中，数据是按照顺序在一个通道上逐位发送或接收的。例如，<span class="words-blog hl-git-1" data-tit="SPI" data-pretit="spi">SPI</span>（Serial Peripheral Interface）、I2C（Inter - Integrated Circuit）和 UART（Universal Asynchronous Receiver/Transmitter）都是串行通信协议。这种传输方式的优点是硬件线路简单，只需要较少的通信线，节省硬件资源，适合长距离通信。但是，因为数据是一位一位地传输，相对于并行通信，在相同的时间内传输的数据量会少一些，不过可以通过提高传输速率来弥补。</p></li><li><p><strong>并行</strong> ：是指数据的多个位同时传输。这就好比有好几扇门同时打开，人们可以同时通过。并行通信在同一时间可以传输多位数据，例如在计算机内部的某些数据总线，32 位的数据总线可以同时传输 32 位数据。其优势在于<span class="words-blog hl-git-1" data-tit="数据传输" data-pretit="数据传输">数据传输</span>速率高，能够快速地传输大量数据。然而，它需要较多的通信线路，硬件成本相对较高，并且随着传输距离的增加，信号之间的干扰也会更明显，所以一般适合短距离、高速率的数据传输场景。</p></li></ul><h2><a name="t1"></a><strong>全双工和半双工</strong></h2><ul><li><p><strong>全双工</strong> ：是指通信双方可以同时发送和接收数据。就像两个人在打电话，双方可以一边说话一边听对方说话。例如，SPI 支持全双工通信，在 SPI 总线中，主设备和从设备可以通过 MOSI（Master Out Slave In，主设备数据输出，从设备数据输入）和 MISO（Master In Slave Out，主设备数据输入，从设备数据输出）两条数据线同时进行数据传输。这种通信模式能够充分利用通信线路，提高通信效率。</p>    </li><li><p><strong>半双工</strong> ：是指通信双方可以进行双向通信，但不能同时发送和接收数据。就像两个人用一个对讲机，一个人在说话的时候，另一个人只能听，不能同时说话。I2C 和 <span class="words-blog hl-git-1" data-tit="UART" data-pretit="uart">UART</span> 一般工作在半双工模式。在 I2C 通信中，数据通过 SDA（Serial Data Line，数据线）进行传输，在同一时刻，数据只能在一个方向上传输；UART 通信中，虽然有 TX（Transmit，发送）和 RX（Receive，接收）两个引脚，但在实际通信过程中，一般同一时间只能进行发送或者接收操作。半双工模式相对简单，但在某些需要同时双向通信的场景下，通信效率会受到一定限制。</p></li></ul><h2><a name="t2"></a><strong>同步和异步</strong></h2><ul><li><p><strong>同步</strong> ：是指在通信过程中，发送方和接收方使用同一个时钟信号来协调数据的发送和接收。就好像一群人在跳集体舞，大家跟着同一个节拍器的节奏来跳舞。SPI 和 I2C 都是同步<span class="words-blog hl-git-1" data-tit="通信协议" data-pretit="通信协议">通信协议</span>。在 SPI 中，主设备提供 SCK（Serial Clock，时钟信号），在时钟信号的驱动下，数据通过 MOSI 和 MISO 进行传输；I2C 中，主设备也提供 SCL（Serial Clock，时钟线）信号来控制数据在 SDA 线上的传输节奏。同步通信的优点是数据传输的准确性和可靠性较高，因为有共同的时钟来约束数据传输，发送方和接收方对数据的处理是同步进行的。不过，同步通信需要额外的时钟信号线，增加了硬件线路的复杂性。</p></li><li><p><strong>异步</strong> ：是指发送方和接收方不需要使用同一个时钟信号来协调数据传输。就像两个人在聊天，没有固定的节拍，每个人按照自己的节奏说话和听别人说话，但通过一些规则（如起始位、停止位等）来保证双方能够理解对方的意思。UART 是一种异步通信协议，它通过在数据的开始和结束处添加起始位和停止位来标识一个数据字符的传输。异步通信的优点是比较灵活，不需要专门的时钟信号线，硬件线路简单。但它的缺点是数据传输的效率相对较低，而且对数据传输的准确性要求较高，因为没有公共时钟来约束，容易出现数据位移等问题。</p></li></ul></div></div>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       <categories>
           
-          <category> 硬件八股知识划重点 </category>
+          <category> 硬件进阶 </category>
           
-          <category> 高频知识点 </category>
-          
-          <category> 串行并行、全双工半双工、同步异步讲解 </category>
+          <category> 器件归一化一致性设计 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 串行并行、全双工半双工、同步异步讲解 </tag>
+            <tag> 器件归一化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件进阶---UART一主多从设计</title>
+      <link href="/2025/11/04/4UART1to2/"/>
+      <url>/2025/11/04/4UART1to2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件进阶 </category>
+          
+          <category> UART一主多从设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> UART一主多从设计 </tag>
             
         </tags>
       
@@ -350,25 +578,52 @@
     
     
     <entry>
-      <title>硬件进阶---器件归一化</title>
-      <link href="/2025/11/04/4guiyihua/"/>
-      <url>/2025/11/04/4guiyihua/</url>
+      <title>硬件进阶---冗余备份机制设计</title>
+      <link href="/2025/11/04/4rybfsheji/"/>
+      <url>/2025/11/04/4rybfsheji/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
           <category> 硬件进阶 </category>
           
-          <category> 器件归一化 </category>
+          <category> 冗余备份机制设计 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 器件归一化 </tag>
+            <tag> 冗余备份机制设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬件进阶---多层板EDA设计</title>
+      <link href="/2025/11/04/4scbsheji/"/>
+      <url>/2025/11/04/4scbsheji/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件进阶 </category>
+          
+          <category> 多层板EDA设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多层板设计 </tag>
             
         </tags>
       
